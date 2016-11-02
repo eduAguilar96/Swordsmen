@@ -6,11 +6,13 @@
   <vsnap>32</vsnap>
   <hsnap>32</hsnap>
   <isometric>0</isometric>
-  <speed>30</speed>
+  <speed>60</speed>
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
   <code>global.gameScore = 0;
+global.totalCombo = 0;
+global.comboTime = room_speed * 10;
 
 global.scoreP1 = 0;
 global.scoreP2 = 0;

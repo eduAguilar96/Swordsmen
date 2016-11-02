@@ -17,7 +17,7 @@ Inital assignment team:
 
 10/25/2016
 
-![alt text](preview.png "Initial push gameplay")
+![alt text](preview.PNG "Initial push gameplay")
 
 ## TODO
 
@@ -40,7 +40,7 @@ Feal free to write anyhting we are missing and need to tackle, preferebly utlize
 - Main Menu.
 - Input change-ability, user recunfigureable inputs.
 - Settings Menu.
-- Score System & Combo System.
+- ~~Score System & Combo System.~~
 - ~~Xbox Controller Input.~~
 - Local Multiplayer.
 - Story...

@@ -79,9 +79,14 @@
     <script>scripts\scr_player_damage.gml</script>
     <script>scripts\scr_collideandmove.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_adventure</font>
+    <font>fonts\fnt_karmaFuture</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_grass_block</object>
     <object>objects\obj_wall</object>
+    <object>objects\obj_game_manager</object>
     <object>objects\bck_cntrl</object>
     <object>objects\obj_lampost</object>
     <objects name="mc">
@@ -89,6 +94,7 @@
       <object>objects\obj_mc_slash1</object>
       <object>objects\obj_mc_slash2</object>
       <object>objects\obj_mc_slash3</object>
+      <object>objects\obj_mc_attack</object>
     </objects>
     <objects name="enviorment">
       <object>objects\obj_en_tall_tree</object>

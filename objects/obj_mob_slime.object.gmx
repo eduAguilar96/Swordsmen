@@ -25,24 +25,30 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Initialize variables
-grav = 0.2;             //gravity
-hsp = 0;                //horizontal speed
-vsp = 0;                //vertical speed
-jumpspeed = 8;          //jump upward speed
-initial_movespeed = 1.5;
-movespeed = initial_movespeed;//pixels per second speed
-image_speed = 0.1;      //initial animation speed (idle)
-move = 1;
+            <string>///Initialize variables
 
-fear_of_heights = true;
+//====Movement variabels
+grav = 0.2;                     //gravity
+hsp = 0;                        //horizontal speed
+vsp = 0;                        //vertical speed
+jumpspeed = 8;                  //jump upward speed
+initial_movespeed = 1.5;        //jumpspeed variable constanlty afected by charachter states
+movespeed = initial_movespeed;  //pixels per second speed
+image_speed = 0.1;              //initial animation speed (idle)
+move = 1;                       //move direction variables
 
-maxhp = 100;            //initial/max health
-hp = maxhp;             //varieng health variable
+//====Toogleable/editable variabels
+fear_of_heights = true;         //if TRUE enemy will turn around on edges
+kill_score = 100;
 
-attacking = false;          //boolean value to togle attacking "is attacking" value
-damage = 25;            //damage it deals
-taking_damage = false;
+//====Stats
+maxhp = 100;                    //initial/max health
+hp = maxhp;                     //health variables afected by code
+
+//====Atack and damage
+attacking = false;          //variable to determine if in attack state
+damage = 25;                //damage it deals on touch and/or atrtack state
+can_take_damage = true;      //variable that controls taking damge cooldown
 
 </string>
           </argument>
@@ -66,8 +72,17 @@ taking_damage = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Disable taking damage
-taking_damage = false;
+            <string>///Enable "Can take damge" property &amp; kill
+can_take_damage = true;
+
+
+if(hp &lt;= 0){
+    global.totalCombo++;
+    global.gameScore += kill_score * global.totalCombo;
+    obj_game_manager.alarm[0] = global.comboTime;
+       
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>
@@ -95,35 +110,38 @@ taking_damage = false;
 //Les puse comentarios para que le puedan ennder y modificar/hacer otros
 //perdon si esta un poco espaguetti o confuso, segun yo esta aceptable
 //asegurense de agarrar tambien el cadigo de INSTANTIATE VARIABLES en el evento
-//de "create" para que funcione el codigo de abajo, tmb el alarm 11, con eso se 
-//habilita la muerte
+//de "create" para que funcione el codigo de abajo, tmb el alarm 0, con eso se 
+//controla el que reciba da;o
 
 
-hsp = move * movespeed;        // horizontal speed is direction * speed
 
-if (vsp &lt; 10){  //Start adding gravity to vertical speed
+
+//====Movement
+hsp = move * movespeed;                 //horizontal speed is direction * speed
+
+if (vsp &lt; 10){                          //Start adding gravity to vertical speed
     vsp += grav;
 }
 
-//Horizontal Collision 
-if (place_meeting(x+hsp,y,obj_wall)){ 
+//====Colissions &amp; behavior with it
+ 
+if (place_meeting(x+hsp,y,obj_wall)){   //Horizontal Collision
     while(!place_meeting(x+sign(hsp),y,obj_wall)){ 
         x += sign(hsp); 
     } 
     hsp = 0; 
     
-    move *= -1;  //change direction if collision
+    move *= -1;                         //change direction if collision
 }   
-x += hsp; //Add horizontal speed to current position
+x += hsp;                               //Add horizontal speed to current position
 
-//Vertical Collision 
-if (place_meeting(x,y+vsp,obj_wall)){ 
+if (place_meeting(x,y+vsp,obj_wall)){   //Vertical Collision 
     while(!place_meeting(x,y+sign(vsp),obj_wall)){ 
         y += sign(vsp); 
     } 
     vsp = 0; 
     
-    //Turn around on edges if fear of heights on
+                                        //Turn around on edges if fear of heights on
     if(fear_of_heights &amp;&amp; !position_meeting(x + (sprite_height/2) * move, y+(sprite_height/2) + 80, obj_wall)){
         hsp = 0; 
         move *= -1;
@@ -131,27 +149,17 @@ if (place_meeting(x,y+vsp,obj_wall)){
 } 
 y += vsp;
 
-//Manage player's attacks collision 
-if(place_meeting(x,y,obj_mc_slash1)){
-    alarm[0] = room_speed*0.05;     //run timer for taking damage
-    taking_damage = 1;
-    hp -= obj_mc_slash1.damage;
-    //show_message("Total = " + string(hp));
-}
-if(place_meeting(x,y,obj_mc_slash2)){
-    alarm[0] = room_speed*0.05;     //run timer for taking damage
-    taking_damage = 1;
-    hp -= obj_mc_slash2.damage;
-    //show_message("Total = " + string(hp));
-}
-if(place_meeting(x,y,obj_mc_slash3)){
-    alarm[0] = room_speed*0.05;     //run timer for taking damage
-    taking_damage = 1;
-    hp -= obj_mc_slash3.damage;
-    //show_message("Total = " + string(hp));
+//====Manage player's attacks collision 
+if(can_take_damage){                        //if can take damage
+    with(instance_place(x,y,obj_mc_attack)){//return id of  colliding instance if it is mc_attack
+        other.can_take_damage = false;      //toglle can_take_damge to false
+        other.hp -= damage;                 //subtract health
+        other.alarm[0] = alarm[0];          //set can_take_damage timer to remainig attacks lifetime timer
+        //show_message("Total = " + string(other.hp));
+    }
 }
 
-if(taking_damage){ //if taking damage restict movement and color change
+if(!can_take_damage){                      //if taking damage restict movement and color change
     image_blend = c_red;
     image_speed = 0;
     vsp = 0;
@@ -162,10 +170,9 @@ if(taking_damage){ //if taking damage restict movement and color change
     image_speed = 0.1;
 }
 
-//Dead check
-if(hp &lt;= 0){
-    instance_destroy();
-}
+//===-Dead check
+//Dead check was moved inside of the timer
+
 ////////////BASIC ENEMY CODE////////////
 </string>
           </argument>

@@ -26,24 +26,31 @@
           <argument>
             <kind>1</kind>
             <string>///Initialize Variables
+
+//====Movement
 grav = 0.2;                     //gravity
 hsp = 0;                        //horizontal speed
 vsp = 0;                        //vertical speed
 initial_jumpspeed = 9           //jump upward speed 9
-jumpspeed = initial_jumpspeed;    
-initial_movespeed = 4;
-movespeed = initial_movespeed;  //pixels per second speed
+jumpspeed = initial_jumpspeed;  //jumpspeed variable constanlty afected by charachter states
+initial_movespeed = 4;          //pixels per second speed
+movespeed = initial_movespeed;  //movespeed variable constanlty afected by charachter states
 image_speed = 0.1;              //initial animation speed (idle)
 
-gamepad_set_axis_deadzone(0,0.3); //gampead joysticks deadzones
+//====Controller
+gamepad_set_axis_deadzone(0,0.3);   //gampead joysticks deadzones
 
+//====Stats
 maxhp = 100;            //initial/max health
 hp = maxhp;             //varieng health variable
 
-combo_time = room_speed * 0.5;  //time in between attacks to togle combo
-can_combo = 0;
-last_attack = 0;
+//====other helper variables
+can_attack = 1;                 //prevents looped attacks inside the attack state
+combo_time = room_speed * 0.5;  //time in between attacks to toogle a combo
+can_combo = 0;                  //variable that works in conjunction with combo_time
+last_attack = 0;                //variable that defines last attack in a combo
 
+//====Inital state
 state = states.normal;
 </string>
           </argument>
@@ -68,6 +75,9 @@ state = states.normal;
           <argument>
             <kind>1</kind>
             <string>///Reset can combo variable
+//This timer is reset every time the player attacks
+//If it reaches 0 and activates it can no longer perfomr a concecutive combo
+//And the last_attack = 0, this to allow a future new first attack.
 can_combo = 0;
 last_attack = 0;
 </string>
@@ -93,7 +103,11 @@ last_attack = 0;
           <argument>
             <kind>1</kind>
             <string>///Reset Attacking variable "Can attack"
-attacking = 0;
+//This timer manages the transition between the attack state
+//and the normal state, the player stays a short period of time
+//in the attack state "freezed", this controls that
+state = states.normal;
+can_attack = 1;         //prevents looped attacks inside the attack state
 </string>
           </argument>
         </arguments>
@@ -116,7 +130,8 @@ attacking = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>switch (state){
+            <string>///Switch between character states
+switch (state){
     case states.normal: scr_player_normal();
     break;
     case states.attacking: scr_player_attacking();
@@ -125,7 +140,7 @@ attacking = 0;
     break;
 }
 
-//fullscreen changer for demo
+//function to enable fullscreen, used in development
 if mouse_check_button_pressed(mb_left)
    {
    if window_get_fullscreen()
