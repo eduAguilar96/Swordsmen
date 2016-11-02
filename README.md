@@ -17,24 +17,34 @@ Inital assignment team:
 
 10/25/2016
 
+![alt text](preview.png "Initial push gameplay")
+
 ## TODO
 
 Feal free to write anyhting we are missing and need to tackle, preferebly utlize ~~sratch~~ for done issues.
 - ~~Main charcater animation & input sensitiveness.~~
+- ~~Main character dynamic jumping~~
 - Main character Dash State.
 - Main character Downward State.
+- Combat system refinement, ~~intuitive~~ and smooth.
 - ~~Basic testing envierment.~~
 - ~~Basic testing enemy.~~
 - ~~Checkpoints~~
-- Basic object interaction.
+- Basic object interaction, ~~collisions~~, buttons, jumppads...
+- 1/10 desired mobs implemented.
+- Tutorial
+- 0/5 desired levels implemented.
+- ~~Grass~~, rock, multi-faced-responsive construction tile object. 
 - Ambient music.
+- Sound effects.
 - Main Menu.
 - Input change-ability, user recunfigureable inputs.
 - Settings Menu.
 - Score System & Combo System.
-- Xbox Controller Input.
+- ~~Xbox Controller Input.~~
 - Local Multiplayer.
 - Story...
+- Finish README Assignment Guidelines section.
 
 ## Contributions Guide
 

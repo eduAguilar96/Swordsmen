@@ -26,46 +26,25 @@
           <argument>
             <kind>1</kind>
             <string>///Initialize Variables
-grav = 0.2;             //gravity
-hsp = 0;                //horizontal speed
-vsp = 0;                //vertical speed
-initial_jumpspeed = 9   //jump upward speed 9
-jumpspeed = initial_jumpspeed;
-point2_sec_after_jump = 0;          
-movespeed = 4;          //pixels per second speed
-image_speed = 0.1;      //initial animation speed (idle)
+grav = 0.2;                     //gravity
+hsp = 0;                        //horizontal speed
+vsp = 0;                        //vertical speed
+initial_jumpspeed = 9           //jump upward speed 9
+jumpspeed = initial_jumpspeed;    
+initial_movespeed = 4;
+movespeed = initial_movespeed;  //pixels per second speed
+image_speed = 0.1;              //initial animation speed (idle)
+
+gamepad_set_axis_deadzone(0,0.3); //gampead joysticks deadzones
 
 maxhp = 100;            //initial/max health
 hp = maxhp;             //varieng health variable
 
-attacking = 0;          //boolean value to togle attacking "is attacking" value
 combo_time = room_speed * 0.5;  //time in between attacks to togle combo
 can_combo = 0;
 last_attack = 0;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="2">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///For jumping, 
-point2_sec_after_jump = 1;
+
+state = states.normal;
 </string>
           </argument>
         </arguments>
@@ -137,122 +116,15 @@ attacking = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Get the player's input//
-key_right = keyboard_check(vk_right); 
-key_left = -keyboard_check(vk_left); 
-key_jump = keyboard_check_pressed(vk_space);
-key_jump_hold = keyboard_check(vk_space);
-key_attack = keyboard_check_pressed(ord("X"));
-
-//React to inputs//
-move = key_left + key_right;   // determines movements direction, -1, 0 or 1
-hsp = move * movespeed;        // horizontal speed is direction * speed
-
-//Manage x speed based animations
-if(move == 1 &amp;&amp; !attacking){
-    image_xscale = 1;
-    if(vsp == 0){
-        sprite_index = sprt_mc_walk; // 12 frames
-        image_speed = 0.3;
-    }
-}
-if(move == -1 &amp;&amp; !attacking){
-    image_xscale = -1;
-    if(vsp == 0){
-        sprite_index = sprt_mc_walk; // 12 frames
-        image_speed = 0.3;
-    }
-}
-if(move == 0 &amp;&amp; vsp == 0 &amp;&amp; !attacking){
-    sprite_index = sprt_mc_idle; // 4 frames
-    image_speed = 0.1;
+            <string>switch (state){
+    case states.normal: scr_player_normal();
+    break;
+    case states.attacking: scr_player_attacking();
+    break;
+    case states.damage: scr_player_damage();
+    break;
 }
 
-//Manage y based animations
-
-if (vsp &lt; 0 &amp;&amp; !place_meeting(x,y+vsp,obj_wall)){ //if going up and not touching floor
-    sprite_index = sprt_mc_jump_up; // 2 frames
-    image_speed = 0.1;
-}
-if (vsp &gt; 0 &amp;&amp; !place_meeting(x,y+vsp,obj_wall)){ //if going down and not touching floor
-    sprite_index = sprt_mc_jump_trans;   // 2 frames
-    image_speed = 0.01;
-}
-if (vsp &gt; 2 &amp;&amp; !place_meeting(x,y+vsp,obj_wall)){ //if going down and not touching floor
-    sprite_index = sprt_mc_jump_down;   // 2 frames
-    image_speed = 0.1;
-}
-
-if (vsp &lt; 10){  //Start adding gravity to vertical speed
-    vsp += grav;
-}
-if (place_meeting(x,y+1,obj_wall)) //if on floor
-{ 
-    vsp = key_jump * -jumpspeed //it can jump
-}
-//Horizontal Collision 
-if (place_meeting(x+hsp,y,obj_wall)){ 
-    while(!place_meeting(x+sign(hsp),y,obj_wall)){ 
-        x += sign(hsp); 
-    } 
-    hsp = 0; 
-}   
-x += hsp; //Add horizontal speed to current position
-
-//Vertical Collision 
-if (place_meeting(x,y+vsp,obj_wall)){ 
-    while(!place_meeting(x,y+sign(vsp),obj_wall)){ 
-        y += sign(vsp); 
-    } 
-    vsp = 0; 
-} 
-y += vsp; //Add vertical speed to current position
-
-
-//Attack
-if(key_attack == 1 &amp;&amp; !attacking &amp;&amp; !can_combo &amp;&amp; last_attack == 0){    //if key pressed and first attack
-    attacking = 1;
-    instance_create(x + 10*(move), y + 5, obj_mc_slash1);
-    alarm[0] = obj_mc_slash1.lifetime/2;              //disable movement while attack active.(half, mejor)
-    alarm[1] = combo_time;                          //toogle timer for disabling combo.
-    can_combo = 1;
-    last_attack = 1;
-}
-if(key_attack == 1 &amp;&amp; !attacking  &amp;&amp; can_combo &amp;&amp; last_attack == 1){
-    attacking = 1;
-    instance_create(x + 10*(move), y + 5, obj_mc_slash2);
-    alarm[0] = obj_mc_slash2.lifetime/2;              //disable movement while attack active.
-    alarm[1] = combo_time;                          //toogle timer for disabling combo.
-    can_combo = 1;
-    last_attack = 2;
-}
-if(key_attack == 1 &amp;&amp; !attacking  &amp;&amp; can_combo &amp;&amp; last_attack == 2){
-    attacking = 1;
-    instance_create(x + 10*(move), y + 5, obj_mc_slash3);
-    alarm[0] = obj_mc_slash3.lifetime/2;              //disable movement while attack active.
-    alarm[1] = combo_time;                          //toogle timer for disabling combo.
-    can_combo = 0;
-    last_attack = 2;
-}
-
-if (attacking){         //if attacking
-    move = 0;           //stop movement
-    movespeed = 0;
-    jumpspeed = 0;
-    vsp = 0;
-    if(place_meeting(x,y+vsp,obj_wall)){    //if on floor... animation
-        sprite_index = sprt_mc_attack_floor;
-    }
-    if(!place_meeting(x,y+vsp,obj_wall)){   //if on air... animation
-        sprite_index = sprt_mc_attack_air;
-    }
-    if(sprite_index = 1){        //freeze on index
-        image_speed = 0;
-    }
-}else{
-    movespeed = 4;
-    jumpspeed = initial_jumpspeed;
-}
 //fullscreen changer for demo
 if mouse_check_button_pressed(mb_left)
    {

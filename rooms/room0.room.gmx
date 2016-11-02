@@ -21,7 +21,13 @@ view_yport[0] = 0;
 view_wview[0] = display_get_width();
 view_hview[0] = display_get_height();
 
-window_set_fullscreen(true);</code>
+window_set_fullscreen(true);
+
+enum states{
+    normal,
+    attacking,
+    damage
+}</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

@@ -72,6 +72,13 @@
     <background>background\bck_test</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_getinputs.gml</script>
+    <script>scripts\scr_player_normal.gml</script>
+    <script>scripts\scr_player_attacking.gml</script>
+    <script>scripts\scr_player_damage.gml</script>
+    <script>scripts\scr_collideandmove.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_grass_block</object>
     <object>objects\obj_wall</object>
