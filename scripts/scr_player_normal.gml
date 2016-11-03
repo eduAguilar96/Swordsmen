@@ -58,8 +58,10 @@ if (vsp < 0) && (!key_jump_hold){   //dynamic jumpin
     vsp -= max(vsp,-jumpspeed/8);
 }
 
-//====Change to possible attack state
-if(key_attack){
+//====Change to possible attack state or downward state
+if(key_attack && !place_meeting(x,y+1,obj_wall) && key_down_hold){
+    state = states.downward;
+}else if(key_attack){
     state = states.attacking;
 }
 
