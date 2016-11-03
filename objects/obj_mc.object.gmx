@@ -138,6 +138,12 @@ switch (state){
     break;
     case states.damage: scr_player_damage();
     break;
+    case states.crouch: scr_player_crouch();
+    break;
+    case states.downward: scr_player_downward();
+    break;
+    case states.dash: scr_player_dash();
+    break;
 }
 
 //function to enable fullscreen, used in development

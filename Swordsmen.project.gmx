@@ -16,6 +16,10 @@
       <sprite>sprites\sprt_mc_attack_floor</sprite>
       <sprite>sprites\sprt_mc_jump_trans</sprite>
       <sprite>sprites\sprt_mc_attack_air</sprite>
+      <sprite>sprites\sprt_mc_downward</sprite>
+      <sprite>sprites\sprt_mc_dash</sprite>
+      <sprite>sprites\sprt_mc_crouch</sprite>
+      <sprite>sprites\sprt_mc_damage</sprite>
       <sprite>sprites\sprt_mc_slash1t1</sprite>
       <sprite>sprites\sprt_mc_slash1t2</sprite>
       <sprite>sprites\sprt_mc_slash1t3</sprite>
@@ -44,10 +48,13 @@
       <sprite>sprites\sprt_grass_block_bump</sprite>
       <sprite>sprites\sprt_tall_tree</sprite>
       <sprite>sprites\sprt_dead_tree</sprite>
+      <sprite>sprites\sprt_grass_sb</sprite>
+      <sprite>sprites\sprt_tutorial_block</sprite>
     </sprites>
     <sprites name="mobs">
       <sprite>sprites\sprt_mob_knight_idle</sprite>
       <sprite>sprites\sprt_mob_knight_attack</sprite>
+      <sprite>sprites\sprt_mob_slime_blue</sprite>
     </sprites>
     <sprites name="other">
       <sprite>sprites\sprt_lampost_on</sprite>
@@ -57,8 +64,6 @@
       <sprite>sprites\sprt_lampost_on_strip10</sprite>
       <sprite>sprites\sprt_lampost_onG_strip10</sprite>
     </sprites>
-    <sprite>sprites\sprt_grass_sb</sprite>
-    <sprite>sprites\sprt_mob_slime_blue</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background2</background>
@@ -70,6 +75,8 @@
     <background>background\bck_mountain4</background>
     <background>background\bck_clouds</background>
     <background>background\bck_test</background>
+    <background>background\background9</background>
+    <background>background\bck_tutorial</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -78,12 +85,16 @@
     <script>scripts\scr_player_attacking.gml</script>
     <script>scripts\scr_player_damage.gml</script>
     <script>scripts\scr_collideandmove.gml</script>
+    <script>scripts\scr_player_crouch.gml</script>
+    <script>scripts\scr_player_downward.gml</script>
+    <script>scripts\scr_player_dash.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_adventure</font>
     <font>fonts\fnt_karmaFuture</font>
   </fonts>
   <objects name="objects">
+    <object>objects\obj_tut_block</object>
     <object>objects\obj_grass_block</object>
     <object>objects\obj_wall</object>
     <object>objects\obj_game_manager</object>
@@ -109,6 +120,8 @@
   <rooms name="rooms">
     <room>rooms\room_init</room>
     <room>rooms\room0</room>
+    <room>rooms\room1</room>
+    <room>rooms\roomblank</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

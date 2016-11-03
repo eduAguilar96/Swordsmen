@@ -1,14 +1,14 @@
 scr_getinputs();
 
-//This state movement values
+//====This state movement values
 movespeed = initial_movespeed;
 jumpspeed = initial_jumpspeed;
 
-//React to inputs
+//====React to inputs
 move = key_left + key_right;   // determines movements direction, -1, 0 or 1
 hsp = move * movespeed;        // horizontal speed is direction * speed
 
-//Manage x speed based animations
+//====Manage x speed based animations
 if(move == 1){
     image_xscale = 1;
     if(vsp == 0){
@@ -28,7 +28,7 @@ if(move == 0 && vsp == 0){
     image_speed = 0.1;
 }
 
-//Manage y based animations
+//====Manage y based animations
 
 if (vsp < 0 && !place_meeting(x,y+vsp,obj_wall)){ //if going up and not touching floor
     sprite_index = sprt_mc_jump_up; // 2 frames
@@ -49,12 +49,16 @@ if (vsp < 10){  //Start adding gravity to vertical speed
 if (place_meeting(x,y+1,obj_wall)) //if on floor
 { 
     vsp = key_jump * -jumpspeed //it can jump
+    //====Change to possible crouch state
+    if(key_down_hold){
+        state = states.crouch;
+    }
 }
 if (vsp < 0) && (!key_jump_hold){   //dynamic jumpin
     vsp -= max(vsp,-jumpspeed/8);
 }
 
-//Change to possible attack state
+//====Change to possible attack state
 if(key_attack){
     state = states.attacking;
 }
