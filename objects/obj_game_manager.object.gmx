@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>-100</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,11 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Instantiate variables
+            <string>///Initialize varibles variables
+
+//====Player lives
 inital_player_lifes = 5;
 player_lifes = inital_player_lifes;
 
+//====boolean variables
 show_combo = false;
+global.pause = false;
+
 </string>
           </argument>
         </arguments>
@@ -81,6 +86,19 @@ global.totalCombo = 0;
 }else{
     show_combo = false;
 }
+if(keyboard_check_pressed(vk_escape) 
+    || gamepad_button_check_pressed(0,gp_start)
+    || gamepad_button_check_pressed(1,gp_start)
+    || gamepad_button_check_pressed(2,gp_start)
+    || gamepad_button_check_pressed(3,gp_start)){
+        if(global.pause){
+            global.pause = false;
+            //instance_deactivate_all(true);
+        }else{
+            global.pause = true;
+            //instance_deactivate_all(true);    
+        }
+}
 </string>
           </argument>
         </arguments>
@@ -105,6 +123,7 @@ global.totalCombo = 0;
             <kind>1</kind>
             <string>/// Score and Health
 
+//Draw SCORE
 draw_set_color(c_black);
 draw_set_halign(fa_right);
 draw_set_font(fnt_adventure);
@@ -115,6 +134,7 @@ draw_set_halign(fa_right);
 draw_set_font(fnt_adventure);
 draw_text(view_xview[0] + view_wport[0] - 20,view_yview[0] + 20, "Score: " + string(global.gameScore) + "#HP : " + string(obj_mc.hp)); 
 
+//Draw COMBO if higher than 2
 if(show_combo){
     draw_set_color(c_black);
     draw_set_halign(fa_right);
@@ -125,6 +145,18 @@ if(show_combo){
     draw_set_halign(fa_right);
     draw_set_font(fnt_karmaFuture);
     draw_text(view_xview[0] + view_wport[0] - 20,view_yview[0] + 100, "COMBO: "  + string(global.totalCombo) + "#" + string(alarm[0]/room_speed)); 
+}
+
+//Draw pause if global.pause = true
+if(global.pause){
+    draw_set_color(c_black);
+    draw_set_alpha(0.5);
+    draw_rectangle(0,0,room_width, room_height,0);
+    draw_set_halign(fa_center);
+    draw_set_font(fnt_karmaFuture);
+    draw_set_color(c_white);
+    draw_set_alpha(1);
+    draw_text(view_xview[0] + 300,view_yview[0] + 300, "Game Paused");    
 }
 </string>
           </argument>

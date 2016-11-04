@@ -25,7 +25,7 @@ Feal free to write anyhting we are missing and need to tackle, preferebly utlize
 - ~~Main charcater animation & input sensitiveness.~~
 - ~~Main character dynamic jumping~~
 - Main character Dash State.
-- Main character Downward State.
+- ~~Main character Downward State.~~
 - Combat system refinement, ~~intuitive~~ and smooth.
 - ~~Basic testing envierment.~~
 - ~~Basic testing enemy.~~
