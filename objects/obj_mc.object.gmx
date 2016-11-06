@@ -44,14 +44,83 @@ gamepad_set_axis_deadzone(0,0.3);   //gampead joysticks deadzones
 maxhp = 100;            //initial/max health
 hp = maxhp;             //varieng health variable
 
-//====other helper variables
+//====Attack
 can_attack = 1;                 //prevents looped attacks inside the attack state
 combo_time = room_speed * 0.5;  //time in between attacks to toogle a combo
 can_combo = 0;                  //variable that works in conjunction with combo_time
 last_attack = 0;                //variable that defines last attack in a combo
 
+//====Damage
+can_take_damage = true;
+
 //====Inital state
 state = states.normal;
+
+//====Checkpoint verifiaction and establishment
+if(global.checkpointR == room){ //if no active checkpoint, set checkpoint in spawn
+    x = global.checkpointx;
+    y = global.checkpointy;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Control invurnable state
+state = states.normal;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Control taking damage state
+
+can_take_damage = true;
+state = states.invincible;
+
+alarm[3] = room_speed * 2;  //set invunerable time
+
+if(hp &lt;= 0){
+    if (global.checkpointR != 0){
+        room_goto(global.checkpointR);
+    }else{
+        room_restart();
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -138,6 +207,8 @@ switch (state){
     break;
     case states.damage: scr_player_damage();
     break;
+    case states.invincible: scr_player_normal_invincible();
+    break;
     case states.crouch: scr_player_crouch();
     break;
     case states.downward: scr_player_downward();
@@ -161,46 +232,6 @@ if mouse_check_button_pressed(mb_left)
 </string>
           </argument>
         </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="object16">
-      <action>
-        <libid>1</libid>
-        <id>115</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_bounce</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>4</kind>
-            <string>1</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>110</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_move_start</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
       </action>
     </event>
   </events>

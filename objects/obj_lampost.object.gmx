@@ -57,8 +57,8 @@ image_speed = room_speed * 0.0035;
             <kind>1</kind>
             <string>if (place_meeting(x,y,obj_mc)){ //if collides with player
     global.checkpoint = id;
-    global.checkpointX = x;
-    global.checkpointY = y;
+    global.checkpointx = x;
+    global.checkpointy = y;
     global.checkpointR = room;
 }
 if (global.checkpointR == room){             //if current checkpoint is in the room

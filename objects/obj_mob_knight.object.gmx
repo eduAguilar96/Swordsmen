@@ -25,19 +25,32 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Initialize Variables
-grav = 0.2;             //gravity
-hsp = 0;                //horizontal speed
-vsp = 0;                //vertical speed
-jumpspeed = 8;          //jump upward speed
-movespeed = 4;          //pixels per second speed
-image_speed = 0.1;      //initial animation speed (idle)
-move = 0;
+            <string>///Initialize variables
 
-maxhp = 200;            //initial/max health
-hp = maxhp;             //varieng health variable
+//====Movement variabels
+grav = 0.2;                     //gravity
+hsp = 0;                        //horizontal speed
+vsp = 0;                        //vertical speed
+jumpspeed = 8;                  //jump upward speed
+initial_movespeed = 1.5;        //jumpspeed variable constanlty afected by charachter states
+movespeed = initial_movespeed;  //pixels per second speed
+image_speed = 0.1;              //initial animation speed (idle)
+move = 1;                       //move direction variables
 
-attacking = 0;          //boolean value to togle attacking "is attacking" value
+//====Toogleable/editable variabels
+fear_of_heights = true;         //if TRUE enemy will turn around on edges
+kill_score = 100;
+
+//====Stats
+maxhp = 100;                    //initial/max health
+hp = maxhp;                     //health variables afected by code
+
+//====Atack and damage
+attacking = false;          //variable to determine if in attack state
+damage = 25;                //damage it deals on touch and/or atrtack state
+attack_damage = 50;
+can_take_damage = true;      //variable that controls taking damge cooldown
+
 </string>
           </argument>
         </arguments>

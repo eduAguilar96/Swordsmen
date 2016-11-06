@@ -48,6 +48,7 @@ hp = maxhp;                     //health variables afected by code
 //====Atack and damage
 attacking = false;          //variable to determine if in attack state
 damage = 25;                //damage it deals on touch and/or atrtack state
+attack_damage = 50;
 can_take_damage = true;      //variable that controls taking damge cooldown
 
 </string>

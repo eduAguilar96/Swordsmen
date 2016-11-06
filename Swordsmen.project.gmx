@@ -83,6 +83,7 @@
   <scripts name="scripts">
     <script>scripts\scr_getinputs.gml</script>
     <script>scripts\scr_player_normal.gml</script>
+    <script>scripts\scr_player_normal_invincible.gml</script>
     <script>scripts\scr_player_attacking.gml</script>
     <script>scripts\scr_player_damage.gml</script>
     <script>scripts\scr_collideandmove.gml</script>
@@ -100,7 +101,7 @@
     <object>objects\obj_wall</object>
     <object>objects\obj_game_manager</object>
     <object>objects\bck_cntrl</object>
-    <object>objects\object16</object>
+    <object>objects\obj_lava_block</object>
     <object>objects\obj_lampost</object>
     <objects name="mc">
       <object>objects\obj_mc</object>

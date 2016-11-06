@@ -21,8 +21,8 @@ global.scoreP4 = 0;
 
 global.checkpoint = noone;  //checkpoint id
 global.checkpointR = 0;     //checkpoint room
-global.checkpointX = 0;     //checkpoint x coordinate
-global.checkpointY = 0;     //checkpoint y coordinate
+global.checkpointx = 0;     //checkpoint x coordinate
+global.checkpointy = 0;     //checkpoint y coordinate
 
 room_goto_next();
 
@@ -32,7 +32,8 @@ enum states{
     damage,
     downward,
     crouch,
-    dash
+    dash,
+    invincible
 }</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>

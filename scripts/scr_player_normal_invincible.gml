@@ -9,7 +9,7 @@ move = key_left + key_right;   // determines movements direction, -1, 0 or 1
 hsp = move * movespeed;        // horizontal speed is direction * speed
 
 //====this state color
-image_blend = c_white;
+image_blend = c_orange;
 
 //====Manage x speed based animations
 if(move == 1){
@@ -69,8 +69,8 @@ if(key_attack && !place_meeting(x,y+1,obj_wall) && key_down_hold){
 }
 
 //====Change to possible damage state on enemy contact
-if(place_meeting(x,y,obj_mob_father)){
-    state = states.damage;
-}
+//if(place_meeting(x,y,obj_mob_father)){
+//    state = states.damage;
+//}
 
 scr_collideandmove();
