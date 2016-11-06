@@ -50,6 +50,7 @@
       <sprite>sprites\sprt_dead_tree</sprite>
       <sprite>sprites\sprt_grass_sb</sprite>
       <sprite>sprites\sprt_tutorial_block</sprite>
+      <sprite>sprites\sprt_lava_block</sprite>
     </sprites>
     <sprites name="mobs">
       <sprite>sprites\sprt_mob_knight_idle</sprite>
@@ -99,6 +100,7 @@
     <object>objects\obj_wall</object>
     <object>objects\obj_game_manager</object>
     <object>objects\bck_cntrl</object>
+    <object>objects\object16</object>
     <object>objects\obj_lampost</object>
     <objects name="mc">
       <object>objects\obj_mc</object>
