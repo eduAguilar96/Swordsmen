@@ -51,7 +51,7 @@ if (vsp < 10){  //Start adding gravity to vertical speed
 }
 if (place_meeting(x,y+1,obj_wall)) //if on floor
 { 
-    vsp = key_jump * -jumpspeed //it can jump
+    if(key_jump) vsp = -jumpspeed;  //it can jump
     //====Change to possible crouch state
     if(key_down_hold){
         state = states.crouch;

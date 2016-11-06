@@ -13,7 +13,7 @@ if(place_meeting(x,y+5,obj_wall)){    //if on floor... animation
 if(!place_meeting(x,y+5,obj_wall)){   //if on air... animation
     sprite_index = sprt_mc_attack_air;
 }
-if(sprite_index = 1){        //freeze on index of attack
+if(image_index == 1){        //freeze on index of attack
     image_speed = 0;
 }
 
