@@ -1,3 +1,5 @@
+obj_game_manager.alarm[0] = 1;              //terminate combo
+
 with(instance_place(x,y,obj_mob_father)){   //check enenmy id
      if(other.can_take_damage){             //if can take damage
         
