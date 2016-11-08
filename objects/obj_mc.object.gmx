@@ -37,6 +37,11 @@ initial_movespeed = 4;          //pixels per second speed
 movespeed = initial_movespeed;  //movespeed variable constanlty afected by charachter states
 image_speed = 0.1;              //initial animation speed (idle)
 
+dashing = false;                //variable to toggle when character is dashing
+initial_dash_bank = 2;          //control numnber of dashes possible
+dash_bank = initial_dash_bank;
+dash_cooldown = 2               //in seconds
+
 //====Controller
 gamepad_set_axis_deadzone(0,0.3);   //gampead joysticks deadzones
 
@@ -49,6 +54,8 @@ can_attack = 1;                 //prevents looped attacks inside the attack stat
 combo_time = room_speed * 0.5;  //time in between attacks to toogle a combo
 can_combo = 0;                  //variable that works in conjunction with combo_time
 last_attack = 0;                //variable that defines last attack in a combo
+initial_attack_bank = 1;        //control number of attacks
+attack_bank = initial_attack_bank;
 
 //====Damage
 can_take_damage = true;
@@ -56,11 +63,50 @@ can_take_damage = true;
 //====Inital state
 state = states.normal;
 
+//====Player color
+player_color = c_white;
+
 //====Checkpoint verifiaction and establishment
 if(global.checkpointR == room){ //if no active checkpoint, set checkpoint in spawn
     x = global.checkpointx;
     y = global.checkpointy;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Contol dashing time
+
+dashing = false;                            //dash en movement
+state = states.normal;
+image_angle = 0;
+vsp = 0;
+hsp = 0;
+
+attack_bank = initial_attack_bank;          //attack refinement and reset
+can_attack = true;
+can_combo = false;
+last_attack = 0;
+
+dash_bank--;                                //dash control
 </string>
           </argument>
         </arguments>
@@ -149,6 +195,7 @@ if(hp &lt;= 0){
 //And the last_attack = 0, this to allow a future new first attack.
 can_combo = 0;
 last_attack = 0;
+attack_bank--;
 </string>
           </argument>
         </arguments>

@@ -18,6 +18,7 @@
       <sprite>sprites\sprt_mc_attack_air</sprite>
       <sprite>sprites\sprt_mc_downward</sprite>
       <sprite>sprites\sprt_mc_dash</sprite>
+      <sprite>sprites\sprt_mc_dash_hitbox</sprite>
       <sprite>sprites\sprt_mc_crouch</sprite>
       <sprite>sprites\sprt_mc_damage</sprite>
       <sprite>sprites\sprt_mc_slash1t1</sprite>
@@ -121,6 +122,7 @@
       <object>objects\obj_mc_slash1</object>
       <object>objects\obj_mc_slash2</object>
       <object>objects\obj_mc_slash3</object>
+      <object>objects\obj_mc_dash_hitbox</object>
       <object>objects\obj_mc_attack</object>
     </objects>
     <objects name="enviorment">
