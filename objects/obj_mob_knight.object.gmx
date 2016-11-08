@@ -32,7 +32,7 @@ grav = 0.2;                     //gravity
 hsp = 0;                        //horizontal speed
 vsp = 0;                        //vertical speed
 jumpspeed = 8;                  //jump upward speed
-initial_movespeed = 0;        //jumpspeed variable constanlty afected by charachter states
+initial_movespeed = 0;          //jumpspeed variable constanlty afected by charachter states
 movespeed = initial_movespeed;  //pixels per second speed
 image_speed = 0.1;              //initial animation speed (idle)
 move = 0;                       //move direction variables
@@ -49,8 +49,33 @@ hp = maxhp;                     //health variables afected by code
 attacking = false;          //variable to determine if in attack state
 damage = 10;                //damage it deals on touch and/or atrtack state
 attack_damage = 50;
+can_attack = true;
 can_take_damage = true;      //variable that controls taking damge cooldown
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Control attack cooldaown
+can_attack = true;
 </string>
           </argument>
         </arguments>
@@ -130,8 +155,8 @@ if(move == -1) image_xscale = move;
 
 //====Colissions &amp; behavior with it
  
-if (place_meeting(x+hsp,y,obj_wall)){   //Horizontal Collision
-    while(!place_meeting(x+sign(hsp),y,obj_wall)){ 
+if (place_meeting(x + hsp * 10,y,obj_wall)){   //Horizontal Collision
+    while(!place_meeting(x+sign(hsp) + hsp * 10,y,obj_wall)){ 
         x += sign(hsp); 
     } 
     hsp = 0; 
@@ -147,10 +172,11 @@ if (place_meeting(x,y+vsp,obj_wall)){   //Vertical Collision
     
                                         //Turn around on edges if fear of heights on
     if(fear_of_heights &amp;&amp; !position_meeting(x + (sprite_height/2) * move, y+(sprite_height/2) + 80, obj_wall)){
-        movespeed = 0;
+        move = 0;
     }
 } 
 y += vsp;
+
 
 //====Manage player's attacks collision 
 if(can_take_damage){                        //if can take damage
@@ -182,20 +208,33 @@ if(instance_exists(obj_mc)){                            //if ther is a player
         move = -1;
         }
     }
-    if(distance_to_object(obj_mc) &lt;= 448){              //if on certain proximity
+    if(distance_to_object(obj_mc) &lt;= 448                //if on a certain range
+                &amp;&amp; y - 200 &lt;= obj_mc.y                  //and upward 200 pixels
+                &amp;&amp; obj_mc.y + 128                       //and downward 2 blocks
+                &amp;&amp; can_attack){                         //and can attack
+        attacking = true;
+    }else if(!distance_to_object(obj_mc) &lt;= 448){       //if out of range(NOT VERTICAL, dont stop if player jumps)
+        attacking = false;
+    }
+    
+    if(attacking){
         sprite_index = sprt_mob_knight_attack;          //start attack animation
         if(image_index &gt;= 6 &amp;&amp; image_index &lt;= 15){      //speed only on walking frames
             movespeed = 6;
         }
-        else{
+        else if(image_index &gt;= 30){                     //if last frame initiate cooldown
+            can_attack = false;
+            alarm[1] = room_speed;
+        }
+        else{                                           //freeze movement on not walking frames
             movespeed = 0;
         }
         
-        attacking = true;                               //turn on attacking variable
-        
+       
     }else{
-        sprite_index = sprt_mob_knight_idle;            //if not on a certain distance
-        attacking = false;
+        sprite_index = sprt_mob_knight_idle;            //if out of range
+        movespeed = 0;
+        can_attack = true;
     }
 }
 ////////////BASIC ENEMY CODE////////////
