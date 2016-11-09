@@ -10,7 +10,8 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code>global.gameScore = 0;
+  <code>//====Score variables
+global.gameScore = 0;
 global.totalCombo = 0;
 global.comboTime = room_speed * 10;
 
@@ -19,15 +20,20 @@ global.scoreP2 = 0;
 global.scoreP3 = 0;
 global.scoreP4 = 0;
 
+//====Checkpoint variables
 global.checkpoint = noone;  //checkpoint id
 global.checkpointR = 0;     //checkpoint room
 global.checkpointx = 0;     //checkpoint x coordinate
 global.checkpointy = 0;     //checkpoint y coordinate
 
-room_goto_next();
 
+//====Variable that defines level
 is_level = false;
 
+//====Enable vsymc
+display_reset(0, true);
+
+//====Enumarator for character states
 enum states{
     normal,
     attacking,
@@ -36,7 +42,10 @@ enum states{
     crouch,
     dash,
     invincible
-}</code>
+}
+
+//====Go to next room
+room_goto_next();</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
