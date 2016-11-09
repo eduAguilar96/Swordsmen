@@ -52,7 +52,7 @@ window_set_fullscreen(true);</code>
     <background visible="0" foreground="0" name="" x="20" y="30" htiled="0" vtiled="0" hspeed="0" vspeed="0" stretch="0"/>
   </backgrounds>
   <views>
-    <view visible="-1" objName="obj_mc" xview="0" yview="0" wview="1920" hview="1080" xport="0" yport="0" wport="1280" hport="720" hborder="700" vborder="256" hspeed="-1" vspeed="-1"/>
+    <view visible="-1" objName="obj_mc" xview="0" yview="0" wview="1920" hview="1080" xport="0" yport="0" wport="1920" hport="1080" hborder="700" vborder="256" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
@@ -248,7 +248,6 @@ window_set_fullscreen(true);</code>
     <instance objName="obj_wall" x="2784" y="992" name="inst_6B597028" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mob_slime" x="640" y="608" name="inst_FD23F1CC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mob_slime" x="736" y="928" name="inst_4A2FA7DC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_game_manager" x="32" y="768" name="inst_2577E193" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mob_slime" x="448" y="928" name="inst_D6C83C3C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_lava_block" x="3104" y="992" name="inst_18B5ABAB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_lava_block" x="3168" y="992" name="inst_33AD93AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

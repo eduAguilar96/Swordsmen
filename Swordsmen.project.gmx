@@ -27,26 +27,7 @@
     </sprites>
     <sprites name="enviorment">
       <sprite>sprites\sprt_wall_father</sprite>
-      <sprite>sprites\sprt_wall_father_grass</sprite>
-      <sprite>sprites\sprt_grass_block_plane</sprite>
-      <sprite>sprites\sprt_grass_block_planeD</sprite>
-      <sprite>sprites\sprt_grass_block_cornerL</sprite>
-      <sprite>sprites\sprt_grass_block_cornerLD</sprite>
-      <sprite>sprites\sprt_grass_block_cornerR</sprite>
-      <sprite>sprites\sprt_grass_block_cornerRD</sprite>
-      <sprite>sprites\sprt_grass_block_sideL</sprite>
-      <sprite>sprites\sprt_grass_block_sideR</sprite>
-      <sprite>sprites\sprt_grass_block_sides</sprite>
-      <sprite>sprites\sprt_grass_block_sides2</sprite>
-      <sprite>sprites\sprt_grass_block_upperL</sprite>
-      <sprite>sprites\sprt_grass_block_upperR</sprite>
-      <sprite>sprites\sprt_grass_block_upper</sprite>
-      <sprite>sprites\sprt_grass_block_lowerR</sprite>
-      <sprite>sprites\sprt_grass_block_lowerL</sprite>
-      <sprite>sprites\sprt_grass_block_lower</sprite>
-      <sprite>sprites\sprt_grass_block_arms</sprite>
-      <sprite>sprites\sprt_grass_block_dirt</sprite>
-      <sprite>sprites\sprt_grass_block_bump</sprite>
+      <sprite>sprites\sprt_grass_block</sprite>
       <sprite>sprites\sprt_wall_father_grass_plataform</sprite>
       <sprite>sprites\sprt_grass_plataform_single</sprite>
       <sprite>sprites\sprt_grass_plataform_left</sprite>
@@ -154,8 +135,7 @@
   <rooms name="rooms">
     <room>rooms\room_init</room>
     <room>rooms\room0</room>
-    <room>rooms\room1</room>
-    <room>rooms\roomblank</room>
+    <room>rooms\level_select</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
