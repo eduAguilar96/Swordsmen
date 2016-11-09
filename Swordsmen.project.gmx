@@ -30,6 +30,7 @@
       <sprite>sprites\sprt_grass_block</sprite>
       <sprite>sprites\sprt_grass_block_day</sprite>
       <sprite>sprites\sprt_wall_father_grass_plataform</sprite>
+      <sprite>sprites\sprt_rock_block</sprite>
       <sprite>sprites\sprt_grass_plataform_single</sprite>
       <sprite>sprites\sprt_grass_plataform_left</sprite>
       <sprite>sprites\sprt_grass_plataform_middle</sprite>
@@ -50,11 +51,13 @@
       <sprite>sprites\sprt_mob_knight_idle</sprite>
       <sprite>sprites\sprt_mob_knight_attack</sprite>
       <sprite>sprites\sprt_mob_slime_blue</sprite>
+      <sprite>sprites\sprt_mob_flypod_slime</sprite>
+      <sprite>sprites\sprite53</sprite>
       <sprite>sprites\sprt_mob_snape_idle</sprite>
+      <sprite>sprites\sprt_mob_flying_harambe</sprite>
       <sprite>sprites\sprt_mob_snape_mad</sprite>
       <sprite>sprites\sprt_mob_snape_pleasure1</sprite>
       <sprite>sprites\sprt_mob_snape_pleasure2</sprite>
-      <sprite>sprites\sprt_mob_flying_harambe</sprite>
       <sprite>sprites\sprt_mob_snape_menu</sprite>
     </sprites>
     <sprites name="other">
@@ -107,6 +110,7 @@
       <object>objects\obj_wall</object>
       <object>objects\obj_grass_block</object>
       <object>objects\obj_grass_block_day</object>
+      <object>objects\obj_rock_block</object>
       <object>objects\obj_grass_plataform</object>
       <object>objects\obj_tut_block</object>
       <object>objects\obj_block_yellow</object>
@@ -116,8 +120,6 @@
       <object>objects\obj_block_purple</object>
       <object>objects\obj_block_red</object>
       <object>objects\obj_lava_block</object>
-      <object>objects\obj_lampost</object>
-      <object>objects\obj_door_0</object>
     </objects>
     <objects name="mc">
       <object>objects\obj_mc</object>
@@ -135,18 +137,22 @@
       <object>objects\obj_mob_father</object>
       <object>objects\obj_mob_flying_harambe</object>
       <object>objects\obj_mob_slime</object>
+      <object>objects\obj_mob_flypod_slime</object>
       <object>objects\obj_mob_knight</object>
     </objects>
-    <objects name="managers">
+    <objects name="managersControles">
       <object>objects\obj_game_manager</object>
       <object>objects\bck_cntrl_night</object>
       <object>objects\bck_cntrl_day</object>
+      <object>objects\obj_door_0</object>
+      <object>objects\obj_lampost</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_init</room>
     <room>rooms\level_select</room>
     <room>rooms\test_room</room>
+    <room>rooms\level_0</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

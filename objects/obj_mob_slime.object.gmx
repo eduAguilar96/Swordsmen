@@ -3,7 +3,7 @@
   <spriteName>sprt_mob_slime_blue</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-4</depth>
   <persistent>0</persistent>
   <parentName>obj_mob_father</parentName>
   <maskName>&lt;undefined&gt;</maskName>
