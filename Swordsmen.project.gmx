@@ -30,6 +30,7 @@
       <sprite>sprites\sprt_grass_block</sprite>
       <sprite>sprites\sprt_grass_block_day</sprite>
       <sprite>sprites\sprt_wall_father_grass_plataform</sprite>
+      <sprite>sprites\sprt_rock_block</sprite>
       <sprite>sprites\sprt_grass_plataform_single</sprite>
       <sprite>sprites\sprt_grass_plataform_left</sprite>
       <sprite>sprites\sprt_grass_plataform_middle</sprite>
@@ -107,6 +108,7 @@
       <object>objects\obj_wall</object>
       <object>objects\obj_grass_block</object>
       <object>objects\obj_grass_block_day</object>
+      <object>objects\obj_rock_block</object>
       <object>objects\obj_grass_plataform</object>
       <object>objects\obj_tut_block</object>
       <object>objects\obj_block_yellow</object>
