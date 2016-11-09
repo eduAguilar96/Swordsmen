@@ -55,6 +55,12 @@
       <sprite>sprites\sprt_tall_tree</sprite>
       <sprite>sprites\sprt_dead_tree</sprite>
       <sprite>sprites\sprt_grass_sb</sprite>
+      <sprite>sprites\sprt_mario_block_yellow</sprite>
+      <sprite>sprites\sprt_mario_block_blue</sprite>
+      <sprite>sprites\sprt_mario_block_green</sprite>
+      <sprite>sprites\sprt_mario_block_grey</sprite>
+      <sprite>sprites\sprt_mario_block_purple</sprite>
+      <sprite>sprites\sprt_mario_block_red</sprite>
       <sprite>sprites\sprt_tutorial_block</sprite>
       <sprite>sprites\sprt_lava_block</sprite>
     </sprites>
@@ -114,6 +120,12 @@
       <object>objects\obj_grass_block</object>
       <object>objects\obj_grass_plataform</object>
       <object>objects\obj_tut_block</object>
+      <object>objects\obj_block_yellow</object>
+      <object>objects\obj_block_blue</object>
+      <object>objects\obj_block_green</object>
+      <object>objects\obj_block_grey</object>
+      <object>objects\obj_block_purple</object>
+      <object>objects\obj_block_red</object>
       <object>objects\obj_lava_block</object>
       <object>objects\obj_lampost</object>
     </objects>
