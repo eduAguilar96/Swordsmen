@@ -21,6 +21,8 @@
 //view_wview[0] = display_get_width();
 //view_hview[0] = display_get_height();
 
+is_level = true;
+
 window_set_fullscreen(true);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>

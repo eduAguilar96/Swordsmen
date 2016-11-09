@@ -26,6 +26,8 @@ global.checkpointy = 0;     //checkpoint y coordinate
 
 room_goto_next();
 
+is_level = false;
+
 enum states{
     normal,
     attacking,
