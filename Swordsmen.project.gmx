@@ -54,6 +54,7 @@
       <sprite>sprites\sprt_mob_snape_mad</sprite>
       <sprite>sprites\sprt_mob_snape_pleasure1</sprite>
       <sprite>sprites\sprt_mob_snape_pleasure2</sprite>
+      <sprite>sprites\sprt_mob_flying_harambe</sprite>
       <sprite>sprites\sprt_mob_snape_menu</sprite>
     </sprites>
     <sprites name="other">
@@ -132,6 +133,7 @@
     </objects>
     <objects name="mobs">
       <object>objects\obj_mob_father</object>
+      <object>objects\obj_mob_flying_harambe</object>
       <object>objects\obj_mob_slime</object>
       <object>objects\obj_mob_knight</object>
     </objects>
