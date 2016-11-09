@@ -113,7 +113,7 @@ window_set_fullscreen(true);</code>
     <instance objName="obj_wall" x="5600" y="1056" name="inst_3F2E7C8B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="5664" y="1056" name="inst_3EF3944F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="5728" y="1056" name="inst_57B9D489" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="bck_cntrl" x="32" y="800" name="inst_CD57D57A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="bck_cntrl_night" x="32" y="800" name="inst_CD57D57A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="2656" y="992" name="inst_A7099371" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="3232" y="736" name="inst_5CE48CF1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="3520" y="864" name="inst_A6507640" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

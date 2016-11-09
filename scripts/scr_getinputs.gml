@@ -11,3 +11,5 @@ key_down_hold = keyboard_check(vk_down) || (gamepad_axis_value(0,gp_axislv) > 0)
 key_up_hold = keyboard_check(vk_up) || (gamepad_axis_value(0,gp_axislv) < 0);
 
 key_dash = keyboard_check_pressed(ord("C")) || gamepad_button_check_pressed(0,gp_shoulderrb);
+
+key_action = keyboard_check_pressed(vk_enter) || (gamepad_button_check_pressed(0,gp_face2));

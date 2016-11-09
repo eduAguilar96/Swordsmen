@@ -127,23 +127,23 @@ if(keyboard_check_pressed(vk_escape)
 draw_set_color(c_black);
 draw_set_halign(fa_right);
 draw_set_font(fnt_adventure);
-draw_text(view_xview[0] + view_wport[0] + 2,view_yview[0] + 20 + 2, "Score: " + string(global.gameScore));
+draw_text(view_xview[0] + view_wport[0] - 20 + 2,view_yview[0] + 20 + 2, "Score: " + string(global.gameScore));
 
 draw_set_color(c_white);
 draw_set_halign(fa_right);
 draw_set_font(fnt_adventure);
-draw_text(view_xview[0] + view_wport[0],view_yview[0] + 20, "Score: " + string(global.gameScore)); 
+draw_text(view_xview[0] + view_wport[0] - 20,view_yview[0] + 20, "Score: " + string(global.gameScore)); 
 
 //Draw stamina &amp; health
 draw_set_color(c_black);
 draw_set_halign(fa_left);
 draw_set_font(fnt_adventure);
-draw_text(view_xview[0] + 20 + 2,view_yview[0] + 20 + 2, "#HP : " + string(obj_mc.hp) + "#Stamina: " + string(obj_mc.dash_bank));
+draw_text(view_xview[0] + 20 + 2,view_yview[0] + 10 + 2, "#HP : " + string(obj_mc.hp) + "#Stamina: " + string(obj_mc.dash_bank));
 
 draw_set_color(c_white);
 draw_set_halign(fa_left);
 draw_set_font(fnt_adventure);
-draw_text(view_xview[0] + 20,view_yview[0] + 20, "#HP : " + string(obj_mc.hp) + "#Stamina: " + string(obj_mc.dash_bank));
+draw_text(view_xview[0] + 20,view_yview[0] + 10, "#HP : " + string(obj_mc.hp) + "#Stamina: " + string(obj_mc.dash_bank));
 
 //Draw COMBO if higher than 2
 if(show_combo){
