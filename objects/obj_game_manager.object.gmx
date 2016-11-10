@@ -28,11 +28,14 @@
             <string>///Initialize varibles variables
 
 //====Player lives
-inital_player_lifes = 5;
-player_lifes = inital_player_lifes;
+global.inital_player_lifes = 5;
+global.player_lifes = global.inital_player_lifes;
 
 //====boolean variables
 show_combo = false;
+is_level = true;
+
+
 global.pause = false;
 
 </string>
@@ -104,6 +107,38 @@ if(keyboard_check_pressed(vk_escape)
         </arguments>
       </action>
     </event>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Spawn the player at the beginning of each room
+//if(room.is_level &amp;&amp; global.playerLives &gt; 0){
+//    instance_create(obj_player_spawn.x,obj_player_spawn.y,obj_mc)
+//}
+if(instance_exists(obj_player_spawn)){
+    instance_create(obj_player_spawn.x,obj_player_spawn.y,obj_mc)
+    is_level = true;
+}else{
+    is_level = false;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -123,51 +158,53 @@ if(keyboard_check_pressed(vk_escape)
             <kind>1</kind>
             <string>/// Score and Health
 
-//Draw SCORE
-draw_set_color(c_black);
-draw_set_halign(fa_right);
-draw_set_font(fnt_adventure);
-draw_text(view_xview[0] + view_wport[0] - 20 + 2,view_yview[0] + 20 + 2, "Score: " + string(global.gameScore));
-
-draw_set_color(c_white);
-draw_set_halign(fa_right);
-draw_set_font(fnt_adventure);
-draw_text(view_xview[0] + view_wport[0] - 20,view_yview[0] + 20, "Score: " + string(global.gameScore)); 
-
-//Draw stamina &amp; health
-draw_set_color(c_black);
-draw_set_halign(fa_left);
-draw_set_font(fnt_adventure);
-draw_text(view_xview[0] + 20 + 2,view_yview[0] + 10 + 2, "#HP : " + string(obj_mc.hp) + "#Stamina: " + string(obj_mc.dash_bank));
-
-draw_set_color(c_white);
-draw_set_halign(fa_left);
-draw_set_font(fnt_adventure);
-draw_text(view_xview[0] + 20,view_yview[0] + 10, "#HP : " + string(obj_mc.hp) + "#Stamina: " + string(obj_mc.dash_bank));
-
-//Draw COMBO if higher than 2
-if(show_combo){
+if(is_level){
+    //Draw SCORE
     draw_set_color(c_black);
     draw_set_halign(fa_right);
-    draw_set_font(fnt_karmaFuture);
-    draw_text(view_xview[0] + view_wport[0] - 20 + 2,view_yview[0] + 100 + 2, "COMBO: "  + string(global.totalCombo) + "#" + string(alarm[0]/room_speed));    
+    draw_set_font(fnt_adventure);
+    draw_text(view_xview[0] + view_wport[0] - 20 + 2,view_yview[0] + 20 + 2, "Score: " + string(global.gameScore) + "#Lifes: " + string(global.inital_player_lifes) + "/" + string(global.player_lifes));
 
-    draw_set_color(c_red);
-    draw_set_halign(fa_right);
-    draw_set_font(fnt_karmaFuture);
-    draw_text(view_xview[0] + view_wport[0] - 20,view_yview[0] + 100, "COMBO: "  + string(global.totalCombo) + "#" + string(alarm[0]/room_speed)); 
-}
-
-//Draw pause if global.pause = true
-if(global.pause){
-    draw_set_color(c_black);
-    draw_set_alpha(0.5);
-    draw_rectangle(0,0,room_width, room_height,0);
-    draw_set_halign(fa_center);
-    draw_set_font(fnt_karmaFuture);
     draw_set_color(c_white);
-    draw_set_alpha(1);
-    draw_text(view_xview[0] + 300,view_yview[0] + 300, "Game Paused");    
+    draw_set_halign(fa_right);
+    draw_set_font(fnt_adventure);
+    draw_text(view_xview[0] + view_wport[0] - 20,view_yview[0] + 20, "Score: " + string(global.gameScore) + "#Lifes: " + string(global.inital_player_lifes) + "/" + string(global.player_lifes)); 
+
+    //Draw stamina &amp; health
+    draw_set_color(c_black);
+    draw_set_halign(fa_left);
+    draw_set_font(fnt_adventure);
+    draw_text(view_xview[0] + 20 + 2,view_yview[0] + 10 + 2, "#HP : " + string(obj_mc.hp) + "#SP: " + string(obj_mc.dash_bank));
+
+    draw_set_color(c_white);
+    draw_set_halign(fa_left);
+    draw_set_font(fnt_adventure);
+    draw_text(view_xview[0] + 20,view_yview[0] + 10, "#HP : " + string(obj_mc.hp) + "#SP: " + string(obj_mc.dash_bank));
+
+    //Draw COMBO if higher than 2
+    if(show_combo){
+        draw_set_color(c_black);
+        draw_set_halign(fa_right);
+        draw_set_font(fnt_karmaFuture);
+        draw_text(view_xview[0] + view_wport[0] - 20 + 2,view_yview[0] + 100 + 2, "COMBO: "  + string(global.totalCombo) + "#" + string(alarm[0]/room_speed));    
+
+        draw_set_color(c_red);
+        draw_set_halign(fa_right);
+        draw_set_font(fnt_karmaFuture);
+        draw_text(view_xview[0] + view_wport[0] - 20,view_yview[0] + 100, "COMBO: "  + string(global.totalCombo) + "#" + string(alarm[0]/room_speed)); 
+    }
+
+    //Draw pause if global.pause = true
+    if(global.pause){
+        draw_set_color(c_black);
+        draw_set_alpha(0.5);
+        draw_rectangle(0,0,room_width, room_height,0);
+        draw_set_halign(fa_center);
+        draw_set_font(fnt_karmaFuture);
+        draw_set_color(c_white);
+        draw_set_alpha(1);
+        draw_text(view_xview[0] + 300,view_yview[0] + 300, "Game Paused");    
+    }
 }
 </string>
           </argument>

@@ -26,10 +26,6 @@ global.checkpointR = 0;     //checkpoint room
 global.checkpointx = 0;     //checkpoint x coordinate
 global.checkpointy = 0;     //checkpoint y coordinate
 
-
-//====Variable that defines level
-is_level = false;
-
 //====Enable vsymc
 display_reset(0, true);
 

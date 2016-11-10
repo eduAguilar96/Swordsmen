@@ -167,6 +167,7 @@
         <object>objects\obj_tut_dash</object>
       </objects>
       <object>objects\obj_lampost</object>
+      <object>objects\obj_player_spawn</object>
     </objects>
   </objects>
   <rooms name="rooms">
