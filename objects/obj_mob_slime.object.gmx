@@ -156,21 +156,17 @@ if(can_take_damage){                        //if can take damage
         other.can_take_damage = false;      //toglle can_take_damge to false
         other.hp -= damage;                 //subtract health
         other.alarm[0] = alarm[0];          //set can_take_damage timer to remainig attacks lifetime timer
-        //show_message("Total = " + string(other.hp));
     }
-}
-
-if(!can_take_damage){                      //if taking damage restict movement and color change
-    image_blend = c_red;
-    image_speed = 0;
-    vsp = 0;
-    movespeed = 0;
-}else{
     image_blend = c_white;
     movespeed = initial_movespeed;
     image_speed = 0.1;
 }
-
+else{                      //if taking damage restict movement and color change
+    image_blend = c_red;
+    image_speed = 0;
+    vsp = 0;
+    movespeed = 0;
+}
 //===-Dead check
 //Dead check was moved inside of the timer
 
