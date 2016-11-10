@@ -146,7 +146,6 @@
     <instance objName="obj_rock_block" x="192" y="576" name="inst_461F521F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_block" x="576" y="1088" name="inst_01DA6690" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_block" x="640" y="1088" name="inst_FEFB8A13" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mc" x="640" y="960" name="inst_2E42E294" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_block" x="704" y="1088" name="inst_988D8FD9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_block" x="0" y="1152" name="inst_8AA2953B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_block" x="0" y="1216" name="inst_1A23BF06" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1881,6 +1880,7 @@
     <instance objName="obj_door_return_0" x="9216" y="1024" name="inst_E161DCAB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="bck_cntrl_cave" x="640" y="896" name="inst_CAB5445B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_text_combat" x="8384" y="64" name="inst_495F5C84" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player_spawn" x="640" y="960" name="inst_798BFAFC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

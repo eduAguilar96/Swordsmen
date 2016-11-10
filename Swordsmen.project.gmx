@@ -100,6 +100,7 @@
     <script>scripts\scr_collideandmove.gml</script>
     <scripts name="player">
       <script>scripts\scr_getinputs.gml</script>
+      <script>scripts\scr_getinputs_2.gml</script>
       <script>scripts\scr_player_normal.gml</script>
       <script>scripts\scr_player_normal_invincible.gml</script>
       <script>scripts\scr_player_attacking.gml</script>

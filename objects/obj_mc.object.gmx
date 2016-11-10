@@ -43,7 +43,8 @@ dash_bank = initial_dash_bank;
 dash_cooldown = 2               //in seconds
 
 //====Controller
-gamepad_set_axis_deadzone(0,0.3);   //gampead joysticks deadzones
+gamepad_set_axis_deadzone(0,0.5);   //gampead joysticks deadzones
+gamepad_set_button_threshold(0,0.4);//gamepad trigger trhrsholds
 
 //====Stats
 maxhp = 100;            //initial/max health
