@@ -159,7 +159,7 @@ state = states.normal;
 can_take_damage = true;
 state = states.invincible;
 
-alarm[3] = room_speed * 2;  //set invunerable time
+alarm[3] = room_speed * 1;  //set invunerable time
 
 if(hp &lt;= 0 &amp;&amp; global.player_lifes &gt; 0){
     global.gameScore -= 5000;

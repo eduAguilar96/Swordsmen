@@ -32,7 +32,7 @@ grav = 0.0;                     //gravity
 hsp = 0;                        //horizontal speed
 vsp = 0;                        //vertical speed
 jumpspeed = 8;                  //jump upward speed
-initial_movespeed = 1;        //jumpspeed variable constanlty afected by charachter states
+initial_movespeed = 10;        //jumpspeed variable constanlty afected by charachter states
 movespeed = initial_movespeed;  //pixels per second speed
 image_speed = 1;              //initial animation speed (idle)
 move = 1;                              //move direction variables
@@ -52,9 +52,9 @@ attack_damage = 50;
 can_take_damage = true;      //variable that controls taking damge cooldown
 
 //=====Enemy spcefic
-spawn_rate = room_speed * 4;
+spawn_rate = 6;
 alarm[1] = spawn_rate;
-
+stopped_spawning = false;
 </string>
           </argument>
         </arguments>
@@ -82,7 +82,11 @@ alarm[1] = spawn_rate;
 if(instance_exists(obj_mc)){
     if(distance_to_object(obj_mc) &lt;= 1000){
         alarm[1] = spawn_rate;
+    }else{
+        stopped_spawning = true;
     }
+}else{
+    stopped_spawning = true;
 }
 </string>
           </argument>
@@ -209,7 +213,39 @@ if(!can_take_damage){                      //if taking damage restict movement a
 //===-Dead check
 //Dead check was moved inside of the timer
 
+//Enemy spceific, spawn control
+if(instance_exists(obj_mc)){
+    if(stopped_spawning &amp;&amp; distance_to_object(obj_mc) &lt;= 1000){
+        alarm[1] = spawn_rate;
+        stopped_spawning = false;
+    }
+}
+
 ////////////BASIC ENEMY CODE////////////
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Turn around if leaves map
+move *= -1;
 </string>
           </argument>
         </arguments>

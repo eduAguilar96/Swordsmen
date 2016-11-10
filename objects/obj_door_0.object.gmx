@@ -96,12 +96,12 @@ if(draw){
     draw_set_color(c_black);
     draw_set_halign(fa_center);
     draw_set_font(fnt_karmaFuture);
-    draw_text(x + 2,y - 100 + 2, "Level 0 - Tutorial Level#press enter key or action button to enter");    
+    draw_text(x + 2,y - 300 + 2, "Level 0 - Tutorial Level#press enter key or action button to enter");    
 
     draw_set_color(c_white);
     draw_set_halign(fa_center);
     draw_set_font(fnt_karmaFuture);
-    draw_text(x,y - 100, "Level 0 - Tutorial Level#press enter key or action button to enter"); 
+    draw_text(x,y - 300, "Level 0 - Tutorial Level#press enter key or action button to enter"); 
 }
 </string>
           </argument>

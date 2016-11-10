@@ -13,7 +13,7 @@
   <code>//====Score variables
 global.gameScore = 0;
 global.totalCombo = 0;
-global.comboTime = room_speed * 10;
+global.comboTime = room_speed * 5;
 
 global.scoreP1 = 0;
 global.scoreP2 = 0;

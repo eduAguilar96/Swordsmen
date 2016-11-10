@@ -54,6 +54,7 @@ can_take_damage = true;      //variable that controls taking damge cooldown
 //=====Enemy spcefic
 spawn_rate = room_speed * 4;
 alarm[1] = spawn_rate;
+stopped_spawning = false;
 
 </string>
           </argument>
@@ -82,7 +83,11 @@ alarm[1] = spawn_rate;
 if(instance_exists(obj_mc)){
     if(distance_to_object(obj_mc) &lt;= 1000){
         alarm[1] = spawn_rate;
+    }else{
+        stopped_spawning = true;
     }
+}else{
+    stopped_spawning = true;
 }
 </string>
           </argument>
@@ -206,6 +211,14 @@ if(!can_take_damage){                      //if taking damage restict movement a
 
 //===-Dead check
 //Dead check was moved inside of the timer
+
+//Enemy spceific, spawn control
+if(instance_exists(obj_mc)){
+    if(stopped_spawning &amp;&amp; distance_to_object(obj_mc) &lt;= 1000){
+        alarm[1] = spawn_rate;
+        stopped_spawning = false;
+    }
+}
 
 ////////////BASIC ENEMY CODE////////////
 </string>

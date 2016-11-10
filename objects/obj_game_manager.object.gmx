@@ -159,39 +159,39 @@ if(instance_exists(obj_player_spawn)){
             <string>/// Score and Health
 
 if(is_level){
-    //Draw SCORE
+    //Draw SCORE and lives
     draw_set_color(c_black);
     draw_set_halign(fa_right);
     draw_set_font(fnt_adventure);
-    draw_text(view_xview[0] + view_wport[0] - 20 + 2,view_yview[0] + 20 + 2, "Score: " + string(global.gameScore) + "#Lifes: " + string(global.inital_player_lifes) + "/" + string(global.player_lifes));
+    draw_text(view_xview[0] + view_wport[0] - 20 + 2,view_yview[0] + 10 + 2, "Score: " + string(global.gameScore) + "#Lives: " + string(global.player_lifes) + "/" + string(global.inital_player_lifes));
 
     draw_set_color(c_white);
     draw_set_halign(fa_right);
     draw_set_font(fnt_adventure);
-    draw_text(view_xview[0] + view_wport[0] - 20,view_yview[0] + 20, "Score: " + string(global.gameScore) + "#Lifes: " + string(global.inital_player_lifes) + "/" + string(global.player_lifes)); 
+    draw_text(view_xview[0] + view_wport[0] - 20,view_yview[0] + 10, "Score: " + string(global.gameScore) + "#Lives: " + string(global.player_lifes) + "/" + string(global.inital_player_lifes)); 
 
     //Draw stamina &amp; health
     draw_set_color(c_black);
     draw_set_halign(fa_left);
     draw_set_font(fnt_adventure);
-    draw_text(view_xview[0] + 20 + 2,view_yview[0] + 10 + 2, "#HP : " + string(obj_mc.hp) + "#SP: " + string(obj_mc.dash_bank));
+    draw_text(view_xview[0] + 20 + 2,view_yview[0] + 10 + 2, "HP : " + string(obj_mc.hp) + "/" + string(obj_mc.maxhp) + "#SP : " + string(obj_mc.dash_bank) + "/" + string(obj_mc.initial_dash_bank));
 
     draw_set_color(c_white);
     draw_set_halign(fa_left);
     draw_set_font(fnt_adventure);
-    draw_text(view_xview[0] + 20,view_yview[0] + 10, "#HP : " + string(obj_mc.hp) + "#SP: " + string(obj_mc.dash_bank));
+    draw_text(view_xview[0] + 20,view_yview[0] + 10, "HP : " + string(obj_mc.hp) + "/" + string(obj_mc.maxhp) + "#SP : " + string(obj_mc.dash_bank) + "/" + string(obj_mc.initial_dash_bank));
 
     //Draw COMBO if higher than 2
     if(show_combo){
         draw_set_color(c_black);
         draw_set_halign(fa_right);
         draw_set_font(fnt_karmaFuture);
-        draw_text(view_xview[0] + view_wport[0] - 20 + 2,view_yview[0] + 100 + 2, "COMBO: "  + string(global.totalCombo) + "#" + string(alarm[0]/room_speed));    
+        draw_text(view_xview[0] + view_wport[0] - 20 + 2,view_yview[0] + 90 + 2, "COMBO: "  + string(global.totalCombo) + "#" + string(alarm[0]/room_speed));    
 
         draw_set_color(c_red);
         draw_set_halign(fa_right);
         draw_set_font(fnt_karmaFuture);
-        draw_text(view_xview[0] + view_wport[0] - 20,view_yview[0] + 100, "COMBO: "  + string(global.totalCombo) + "#" + string(alarm[0]/room_speed)); 
+        draw_text(view_xview[0] + view_wport[0] - 20,view_yview[0] + 90, "COMBO: "  + string(global.totalCombo) + "#" + string(alarm[0]/room_speed)); 
     }
 
     //Draw pause if global.pause = true
