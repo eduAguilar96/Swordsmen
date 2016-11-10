@@ -67,7 +67,13 @@
       <sprite>sprites\sprt_lampost_offG</sprite>
       <sprite>sprites\sprt_lampost_on_strip10</sprite>
       <sprite>sprites\sprt_lampost_onG_strip10</sprite>
+      <sprite>sprites\sprt_door_return</sprite>
       <sprite>sprites\sprt_door</sprite>
+      <sprites name="tutorial">
+        <sprite>sprites\sprt_tut_jump</sprite>
+        <sprite>sprites\sprt_tut_attack</sprite>
+        <sprite>sprites\sprt_tut_dash</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -86,6 +92,8 @@
     <background>background\bck_reflex_day</background>
     <background>background\bck_flow_day</background>
     <background>background\bck_day_sun</background>
+    <background>background\bck_cave_rock</background>
+    <background>background\bck_cave_rock2</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -144,7 +152,20 @@
       <object>objects\obj_game_manager</object>
       <object>objects\bck_cntrl_night</object>
       <object>objects\bck_cntrl_day</object>
-      <object>objects\obj_door_0</object>
+      <object>objects\bck_cntrl_cave</object>
+      <objects name="doors">
+        <object>objects\obj_door_0</object>
+        <object>objects\obj_door_return_0</object>
+      </objects>
+      <objects name="text">
+        <object>objects\obj_text_tut_welcome</object>
+        <object>objects\obj_text_tut_checkpoint</object>
+        <object>objects\obj_text_dash</object>
+        <object>objects\obj_text_combat</object>
+        <object>objects\obj_text_tut_jump</object>
+        <object>objects\obj_text_tut_attack</object>
+        <object>objects\obj_tut_dash</object>
+      </objects>
       <object>objects\obj_lampost</object>
     </objects>
   </objects>
