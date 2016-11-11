@@ -23,8 +23,8 @@ Inital assignment team:
 - [Index](#index)
 - [Gallery](#gallery)
 - [Contributions Guide/Guideline](#contributions-guide/guideline)
-  - [Git & Github](#git-&-github)
-    - [Mini Github Tutorial](#mini-github-tutorial)
+  - [Git & Github](#git-and-github)
+    - [Mini Github Tutorial](#mini-github-tutorial-reminder)
   - [Levels and Rooms](#levels/rooms)
   - [Collideable tiles/blocks](#collideable-tiles/blocks)
   - [Mobs](#mobs)
@@ -46,7 +46,7 @@ Equipo, **Porfavor lean** esto antes de hacer cualquier **pull request** y/o **p
 
 Team, **Please read** this before attempting any **pull request** and/or **push** into the repository. I am taking into consideration this is your first time using github.
 
-### Git & Github
+### Git and Github
 - From `dev` branch, checkout a new Branch with the command `git checkout -b type/branch_name`. Where type is a general idea of what's implemented. Ex. `fix`, `feature`, `enhancement`, etc.
 - **Commits** messeges' must be precise and concise, *please*. Ex `git commit -m "Added mobility to character object"` or `git commit -m "Fixed wall jumping bug"`.
 - Grab an issue from the Github repo and try to fix it or something from the TODO list.
@@ -55,6 +55,7 @@ Team, **Please read** this before attempting any **pull request** and/or **push*
 #### Mini Github Tutorial Reminder
 
 Your workflow must be divided into *two* steps:
+
 1. Actual coding and editing files and/or images.
 2. Creating git **commits**(saved points in the projects timeline).
 
@@ -67,7 +68,7 @@ To use Git in your computer you're going to be using your *Terminal* application
 
 1. Locate yourself from inside your terminal where you want to clone the **repository**, using the command `cd`. Ex. `cd documents/gamemaker/projects`. This is my folder where I in my computer keep this project.
 2. Clone the **repository** `git clone herGoesTheLink`, remeber to press the green button at the upper right conrer inside the github repository to get the link.
-  - If you have already previously clones the **repo** just update it with a **pull** `git pull`.
+  - If you have already previously cloned the **repo** just update it with a **pull** `git pull`.
 3. Change yourself from the default `master` branch to the `dev` branch, `git checkout dev`.
 4. Once in the dev branch "branch" out to your personal branch, create it, `git checkout YourBranchesName`
 5. Do your coding & project contribution.
@@ -179,13 +180,16 @@ Feal free to write anyhting we are missing and need to tackle.
 ##### Objetivo
 
 Haciendo un videojuego interactivo, los estudiantes que comienzan sus estudios en Tecnologias Computacionales, podran desarrollar las siguientes habilidades:  
+
 - Trabajo en equipo con Aprendizaje Colaborativo
 - Desarrollo de un producto terminado, hecho y presentado con alta calidad
 - Analisis y evaluacion de requerimientos generales
 - Dise;o de solucionespara satisfacer requisitos de software
+
 ##### Caracteristicas del juego
 
 Las siguientes caracteristicas se consideran esenciales para undesarrollo minimo de un videojuego:
+
 1. _Tematica libre_
 2. _Equipo conformado por 4 o 5 personas._
 3. _Interaccion constante con el usuario; las acciones del usuario desenvuelven la trama del videojuego. El jugador recibe constante retroalimentacion visual y sonora_
@@ -193,6 +197,7 @@ Las siguientes caracteristicas se consideran esenciales para undesarrollo minimo
 5. _Entregar un manual por escrito donde se explique cual es el objetivo del videojuego, y como se utliza (deb de ser visual, usando screenshots o screen grabs)._
 
 Las siguientes caracteristicas no son requeridas, pero se tendran consideraciones especiales a los productos que manejen. Caracteristicas avanzadas:
+
 1. _Manejo de niveles, o diferentes escenas._
 2. _Interaccion con mas de un jugador_
 
@@ -204,8 +209,10 @@ Las siguientes caracteristicas no son requeridas, pero se tendran consideracione
 4. Exposcicion y "venta"(pitch) de su Videojuego ante un jurado externo.
 5. Los finalistas de la Expo haran su presentacion ante el grupo pleno en la fecha del Final.
 
-##### NOTA: 
+##### NOTA:
+
 Una sugerencia es que usen SCRATCH (scratch.mit.edu). Si deciden que NO quieren usarla, si podran usar alguna otra herramienta, sin embargo tiene 2 restricciones:
+
 1. Es necesario validarla con nosotros (enviar mail a _itc.mty@gmail.com_ incluyendo los datos de los miembros del equipo y cual tecnologia usaran);
 2. TODOS los miembros del equipo deben saber/aprender esa tecnologia, ya que se trata de un proyecto de aprendizaje colaborativo!!
 
