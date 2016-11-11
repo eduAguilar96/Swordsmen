@@ -1273,8 +1273,6 @@
     <instance objName="obj_rock_block" x="6784" y="256" name="inst_EF63AA94" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_block" x="6720" y="256" name="inst_6D081D7A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_block" x="6656" y="256" name="inst_88DE7ECF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rock_block" x="6592" y="192" name="inst_7E202953" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rock_block" x="6528" y="128" name="inst_7D716860" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_block" x="6464" y="64" name="inst_A32A0B19" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_block" x="6400" y="64" name="inst_C2B70450" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_block" x="6400" y="0" name="inst_06563D0B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1285,7 +1283,6 @@
     <instance objName="obj_rock_block" x="6656" y="64" name="inst_5B2EB534" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_block" x="6528" y="64" name="inst_17FC6EBA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_block" x="6592" y="64" name="inst_6D25A97B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rock_block" x="6592" y="128" name="inst_0EF152F4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_block" x="6656" y="128" name="inst_33418033" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_block" x="6784" y="128" name="inst_4D6939E9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_block" x="6784" y="192" name="inst_230F6BF0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1559,7 +1556,6 @@
     <instance objName="obj_rock_block" x="6656" y="448" name="inst_E21E0FA0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_block" x="6656" y="384" name="inst_02E63EFB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_block" x="6720" y="384" name="inst_4E772913" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_rock_block" x="6592" y="256" name="inst_E130D4F3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_block" x="6592" y="384" name="inst_9D492C9D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_block" x="6592" y="448" name="inst_7F4B8D76" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_block" x="6528" y="448" name="inst_DEBD55DF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1881,6 +1877,11 @@
     <instance objName="bck_cntrl_cave" x="640" y="896" name="inst_CAB5445B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_text_combat" x="8384" y="64" name="inst_495F5C84" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player_spawn" x="640" y="960" name="inst_798BFAFC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_npc_marcianito" x="6369" y="295" name="inst_EBBABA56" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rock_block" x="6592" y="128" name="inst_BC251B7E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rock_block" x="6464" y="448" name="inst_69230296" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rock_block" x="6400" y="448" name="inst_ACE9E624" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rock_block" x="6336" y="448" name="inst_732A3CA7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

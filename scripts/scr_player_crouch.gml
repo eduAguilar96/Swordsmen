@@ -40,4 +40,10 @@ if(key_down_hold){
 else{
     state = states.normal;
 }
+
+//====Change to possible damage state on enemy contact
+if(place_meeting(x,y,obj_mob_father)){
+    state = states.damage;
+}
+
 scr_collideandmove();
