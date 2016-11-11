@@ -156,6 +156,8 @@ if(can_take_damage){                        //if can take damage
         other.can_take_damage = false;      //toglle can_take_damge to false
         other.hp -= damage;                 //subtract health
         other.alarm[0] = alarm[0];          //set can_take_damage timer to remainig attacks lifetime timer
+        
+        instance_create(other.x,other.y,obj_hit);   //play hit animation
     }
     image_blend = c_white;
     movespeed = initial_movespeed;
@@ -166,6 +168,8 @@ else{                      //if taking damage restict movement and color change
     image_speed = 0;
     vsp = 0;
     movespeed = 0;
+    
+   
 }
 
 //===-Dead check

@@ -154,6 +154,8 @@ if(can_take_damage){                        //if can take damage
         other.can_take_damage = false;      //toglle can_take_damge to false
         other.hp -= damage;                 //subtract health
         other.alarm[0] = alarm[0];          //set can_take_damage timer to remainig attacks lifetime timer
+        
+        instance_create(other.x,other.y,obj_hit);   //play hit animation
     }
     image_blend = c_white;
     movespeed = initial_movespeed;
@@ -185,7 +187,7 @@ if(instance_exists(obj_mc)){
         //move = 0;
         //image_index = 0;
         //image_speed = 0.1;
-        if(image_index == sprt_mob_golem_punch){
+        if(image_index &gt;= 6){
             attacking = false;
         }
         

@@ -72,6 +72,7 @@
       <sprite>sprites\sprt_lampost_onG_strip10</sprite>
       <sprite>sprites\sprt_door_return</sprite>
       <sprite>sprites\sprt_door</sprite>
+      <sprite>sprites\sprt_hit</sprite>
       <sprites name="tutorial">
         <sprite>sprites\sprt_tut_jump</sprite>
         <sprite>sprites\sprt_tut_attack</sprite>
@@ -180,6 +181,9 @@
     </objects>
     <objects name="npc">
       <object>objects\obj_npc_marcianito</object>
+    </objects>
+    <objects name="other">
+      <object>objects\obj_hit</object>
     </objects>
   </objects>
   <rooms name="rooms">
