@@ -173,16 +173,17 @@ if(instance_exists(obj_mc)){
     if(place_meeting(x,y+1,obj_wall)){              //if on the floor
          attacking = false;
          sprite_index = sprt_mob_hog_walk;
-         if(distance_to_object(obj_mc) &lt;= 640){     //turn towards player if at certain distacne
+         if(distance_to_object(obj_mc) &lt;= 256){      //jump at player player if at certain distance
+            vsp = -jumpspeed;
+         }
+         else if(distance_to_object(obj_mc) &lt;= 640){     //turn towards player if at certain distacne
             if(obj_mc.x &gt; x){
                 move = 1;
             }else{
                 move = -1;
             }    
         }
-        if(distance_to_object(obj_mc) &lt;= 256){      //jump at player player if at certain distance
-            vsp = -jumpspeed;
-        }
+        
     }else{
         attacking = true;
         sprite_index = sprt_mob_hog_attack;
