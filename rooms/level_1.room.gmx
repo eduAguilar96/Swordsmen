@@ -578,7 +578,7 @@ window_set_fullscreen(true);</code>
     <instance objName="obj_grass_block_day" x="2752" y="960" name="inst_6E31968F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_en_dead_tree" x="778" y="923" name="inst_F868BE2F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mob_golem" x="2176" y="896" name="inst_A0FB75FC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mob_hog" x="1024" y="960" name="inst_65DF46B3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mob_hog" x="2432" y="896" name="inst_65DF46B3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grass_block" x="1408" y="960" name="inst_551C496E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grass_block" x="1472" y="960" name="inst_B87D550C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grass_block" x="1472" y="896" name="inst_CEAD042F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -629,6 +629,9 @@ window_set_fullscreen(true);</code>
     <instance objName="obj_grass_block" x="960" y="704" name="inst_4A148A9F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grass_block" x="1088" y="640" name="inst_884E4CE1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grass_block" x="1088" y="704" name="inst_FE4E6F57" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_lampost" x="448" y="768" name="inst_614AC9AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mob_slime_big" x="1746" y="448" name="inst_EB208904" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mob_slime_big" x="1088" y="896" name="inst_99C690D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

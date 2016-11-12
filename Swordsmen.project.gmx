@@ -51,6 +51,7 @@
       <sprite>sprites\sprt_mob_knight_idle</sprite>
       <sprite>sprites\sprt_mob_knight_attack</sprite>
       <sprite>sprites\sprt_mob_slime_blue</sprite>
+      <sprite>sprites\sprt_mob_slime_big</sprite>
       <sprite>sprites\sprt_mob_flypod_slime</sprite>
       <sprite>sprites\sprt_mob_snape_idle</sprite>
       <sprite>sprites\sprt_mob_snape_mad</sprite>
@@ -155,6 +156,7 @@
       <object>objects\obj_mob_father</object>
       <object>objects\obj_mob_flying_harambe</object>
       <object>objects\obj_mob_slime</object>
+      <object>objects\obj_mob_slime_big</object>
       <object>objects\obj_mob_hog</object>
       <object>objects\obj_mob_golem</object>
       <object>objects\obj_mob_flypod_slime</object>
