@@ -57,8 +57,12 @@ mpos = 0;
           <argument>
             <kind>1</kind>
             <string>var move = 0;
-move -= max(keyboard_check_pressed(vk_up),keyboard_check_pressed(ord("W")),0);
-move += max(keyboard_check_pressed(vk_down),keyboard_check_pressed(ord("S")),0);
+//move -= max(keyboard_check_pressed(vk_up),keyboard_check_pressed(ord("W")),0);
+//move += max(keyboard_check_pressed(vk_down),keyboard_check_pressed(ord("S")),0);
+
+scr_getinputs();
+
+move = key_down - key_up;
 
 if (move != 0)
 {
@@ -68,8 +72,10 @@ if (move != 0)
 }
 
 var push;
-push = max(keyboard_check_released(vk_enter),keyboard_check_released(vk_shift),keyboard_check_released(vk_space), 0);
+push = max(key_jump,key_action,0);
 if (push == 1) scr_menu();
+
+
 
 
 
@@ -97,7 +103,7 @@ if (push == 1) scr_menu();
           <argument>
             <kind>1</kind>
             <string>draw_set_halign(fa_left);
-draw_set_valign(fa_middle);
+//draw_set_valign(fa_middle);
 draw_set_font(fnt_adventure);
 draw_set_color(c_white);
 

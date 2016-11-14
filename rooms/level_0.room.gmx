@@ -1577,7 +1577,7 @@
     <instance objName="obj_rock_block" x="6272" y="1024" name="inst_66C153AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_block" x="6080" y="1088" name="inst_E1737173" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_block" x="6144" y="1088" name="inst_EC8B4BEF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_tut_dash" x="6419" y="746" name="inst_02384928" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_text_tut_dash" x="6419" y="746" name="inst_02384928" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_lampost" x="6336" y="832" name="inst_6D575AE3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_text_dash" x="7552" y="768" name="inst_2EF08FBD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_rock_block" x="7872" y="1024" name="inst_2A389013" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

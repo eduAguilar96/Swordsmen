@@ -105,6 +105,7 @@
     <background>background\bck_day_sun</background>
     <background>background\bck_cave_rock</background>
     <background>background\bck_cave_rock2</background>
+    <background>background\bck_grass</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -112,7 +113,6 @@
     <script>scripts\scr_collideandmove.gml</script>
     <scripts name="player">
       <script>scripts\scr_getinputs.gml</script>
-      <script>scripts\scr_getinputs_2.gml</script>
       <script>scripts\scr_player_normal.gml</script>
       <script>scripts\scr_player_normal_invincible.gml</script>
       <script>scripts\scr_player_attacking.gml</script>
@@ -165,7 +165,6 @@
       <object>objects\obj_mob_knight</object>
     </objects>
     <objects name="managersControles">
-      <object>objects\obj_menu_controler</object>
       <object>objects\obj_game_manager</object>
       <object>objects\bck_cntrl_night</object>
       <object>objects\bck_cntrl_day</object>
@@ -180,12 +179,22 @@
         <object>objects\obj_text_tut_checkpoint</object>
         <object>objects\obj_text_dash</object>
         <object>objects\obj_text_combat</object>
+        <object>objects\obj_text_menu_title</object>
         <object>objects\obj_text_tut_jump</object>
         <object>objects\obj_text_tut_attack</object>
-        <object>objects\obj_tut_dash</object>
+        <object>objects\obj_text_tut_dash</object>
       </objects>
-      <object>objects\obj_lampost</object>
+      <objects name="menu">
+        <object>objects\obj_menu_controler</object>
+        <object>objects\obj_menu_mc</object>
+        <object>objects\obj_menu_snape</object>
+        <object>objects\obj_menu_slime</object>
+        <object>objects\obj_menu_mc_2</object>
+        <object>objects\obj_menu_mc_3</object>
+        <object>objects\obj_menu_mc_4</object>
+      </objects>
       <object>objects\obj_player_spawn</object>
+      <object>objects\obj_lampost</object>
     </objects>
     <objects name="npc">
       <object>objects\obj_npc_marcianito</object>
@@ -196,7 +205,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_init</room>
-    <room>rooms\menu_room</room>
+    <room>rooms\level_menu</room>
     <room>rooms\level_select</room>
     <room>rooms\level_0</room>
     <room>rooms\level_1</room>
