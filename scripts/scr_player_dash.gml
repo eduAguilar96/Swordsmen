@@ -71,10 +71,16 @@ if(!dashing){
     }else{
         state = states.normal;
         image_angle = 0;
-    }
-    
-    
-    
+    }  
+}
+
+//====Change to possible damage state on lava block touch
+if( place_meeting(x,y+1,obj_lava_block)
+    || place_meeting(x,y-1,obj_lava_block)
+    || place_meeting(x+1,y,obj_lava_block)
+    || place_meeting(x-1,y,obj_lava_block)){
+        
+        state = states.damage;
 }
 
 instance_create(x,y,obj_mc_dash_hitbox);

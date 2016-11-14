@@ -87,8 +87,14 @@ if(dash_bank < initial_dash_bank){                  //regen dash
 }
 
 //====Change to possible damage state on enemy contact
-if(place_meeting(x,y,obj_mob_father) || place_meeting(x,y,obj_lava_block)){
-    state = states.damage;
+if( place_meeting(x,y,obj_mob_father) 
+    || place_meeting(x,y+1,obj_lava_block)
+    || place_meeting(x,y-1,obj_lava_block)
+    || place_meeting(x+1,y,obj_lava_block)
+    || place_meeting(x-1,y,obj_lava_block)){
+        
+        state = states.damage;
 }
+
 
 scr_collideandmove();
