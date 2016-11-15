@@ -31,7 +31,7 @@ hsp = 7;
 alarm[0] = lifetime;
 image_speed = 0.4;
 
-attck_dir = obj_mc.image_xscale;
+attack_dir = 1;
 
 damage = 45;
 doing_damage = false;
@@ -81,9 +81,9 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x += hsp*attck_dir;                     //contast speed in correct direction
+            <string>x += hsp*attack_dir;                     //contast speed in correct direction
 
-image_xscale = attck_dir;               //face the correct direction
+image_xscale = attack_dir;               //face the correct direction
 
 if(image_index = 2){
     image_speed = 0;                    //freeze frame when in last frame

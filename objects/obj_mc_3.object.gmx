@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>-6</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_mc</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -43,8 +43,8 @@ dash_bank = initial_dash_bank;
 dash_cooldown = 2               //in seconds
 
 //====Controller
-gamepad_set_axis_deadzone(0,0.5);   //gampead joysticks deadzones
-gamepad_set_button_threshold(0,0.4);//gamepad trigger trhrsholds
+gamepad_set_axis_deadzone(1,0.5);   //gampead joysticks deadzones
+gamepad_set_button_threshold(1,0.4);//gamepad trigger trhrsholds
 
 //====Stats
 maxhp = 100;            //initial/max health
@@ -62,11 +62,11 @@ attack_bank = initial_attack_bank;
 can_take_damage = true;
 
 //====Inital state
-global.p1_dead = false;
+global.p3_dead = false;
 state = states.normal;
 
 //====Player color
-player_color = c_white;
+player_color = c_green;
 
 //====Checkpoint verifiaction and establishment
 if(global.checkpointR == room){ //if no active checkpoint, set checkpoint in spawn
@@ -166,18 +166,18 @@ alarm[3] = room_speed * 1;  //set invunerable time
 if(hp &lt;= 0 &amp;&amp; global.player_lifes &gt; 0){     //if dead and can revive
     global.gameScore -= 5000;
     global.player_lifes--;
-    global.p1_dead = true;
+    global.p3_dead = true;
     
     
     if (global.checkpointR != room){
         room_goto(global.checkpointR);
     }else{                                  //if checkpoint in current room
-        instance_create(global.checkpointx,global.checkpointy,obj_mc);
+        instance_create(global.checkpointx,global.checkpointy,obj_mc_3);
         instance_destroy();                   //destroy current player
     }
 }else if(hp &lt;= 0 &amp;&amp; global.player_lifes &lt;= 0){
     //game_restart();
-    global.p1_dead = true;
+    global.p3_dead = true;
     instance_destroy();
 }
 </string>
@@ -260,35 +260,23 @@ can_attack = 1;         //prevents looped attacks inside the attack state
           <argument>
             <kind>1</kind>
             <string>///Switch between character states
+
 switch (state){
-    case states.normal: scr_player_normal();
+    case states.normal: scr_player_normal_3();
     break;
     case states.attacking: scr_player_attacking();
     break;
     case states.damage: scr_player_damage();
     break;
-    case states.invincible: scr_player_normal_invincible();
+    case states.invincible: scr_player_normal_invincible_3();
     break;
-    case states.crouch: scr_player_crouch();
+    case states.crouch: scr_player_crouch_3();
     break;
     case states.downward: scr_player_downward();
     break;
-    case states.dash: scr_player_dash();
+    case states.dash: scr_player_dash_3();
     break;
 }
-
-//function to enable fullscreen, used in development
-if mouse_check_button_pressed(mb_left)
-   {
-   if window_get_fullscreen()
-      {
-      window_set_fullscreen(false);
-      }
-   else
-      {
-      window_set_fullscreen(true);
-      }
-   }
 </string>
           </argument>
         </arguments>

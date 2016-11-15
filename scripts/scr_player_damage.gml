@@ -22,7 +22,7 @@ with(instance_place(x,y,obj_mob_father)){   //check enenmy id
         state = states.normal;
     }
 }
-with(instance_place(x,y + 1,obj_lava_block)){   //check enenmy id
+with(instance_place(x,y + 5,obj_lava_block)){   //check enenmy id
      if(other.can_take_damage){             //if can take damage
         
         other.can_take_damage = false       //cant take damage anymore, avoid loop
@@ -44,7 +44,7 @@ with(instance_place(x,y + 1,obj_lava_block)){   //check enenmy id
         state = states.normal;
     }
 }
-with(instance_place(x,y - 1,obj_lava_block)){   //check enenmy id
+with(instance_place(x,y - 5,obj_lava_block)){   //check enenmy id
      if(other.can_take_damage){             //if can take damage
         
         other.can_take_damage = false       //cant take damage anymore, avoid loop
@@ -66,7 +66,7 @@ with(instance_place(x,y - 1,obj_lava_block)){   //check enenmy id
         state = states.normal;
     }
 }
-with(instance_place(x + 1,y,obj_lava_block)){   //check enenmy id
+with(instance_place(x + 5,y,obj_lava_block)){   //check enenmy id
      if(other.can_take_damage){             //if can take damage
         
         other.can_take_damage = false       //cant take damage anymore, avoid loop
@@ -88,7 +88,7 @@ with(instance_place(x + 1,y,obj_lava_block)){   //check enenmy id
         state = states.normal;
     }
 }
-with(instance_place(x - 1,y,obj_lava_block)){   //check enenmy id
+with(instance_place(x - 5,y,obj_lava_block)){   //check enenmy id
      if(other.can_take_damage){             //if can take damage
         
         other.can_take_damage = false       //cant take damage anymore, avoid loop

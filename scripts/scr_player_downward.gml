@@ -1,4 +1,4 @@
-scr_getinputs();
+//scr_getinputs();
 if(!place_meeting(x,y+1,obj_wall)){
     vsp = 15;
     movespeed = 0;
