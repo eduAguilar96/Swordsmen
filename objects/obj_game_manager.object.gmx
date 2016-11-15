@@ -36,16 +36,16 @@ show_combo = false;
 is_level = true;
 
 //====Players
-p1_on = true;
-p2_on = false;
-p3_on = false;
-p4_on = false;
-p5_on = false;
-p6_on = false;
-p7_on = false;
-p8_on = false;
+global.p1_on = true;
+global.p2_on = false;
+global.p3_on = false;
+global.p4_on = false;
+global.p5_on = false;
+global.p6_on = false;
+global.p7_on = false;
+global.p8_on = false;
 
-num_players = 1;
+global.num_players = 1;
 
 global.p1_dead = false;
 global.p2_dead = false;
@@ -55,6 +55,15 @@ global.p5_dead = false;
 global.p6_dead = false;
 global.p7_dead = false;
 global.p8_dead = false;
+
+global.p1_in_area = false;
+global.p2_in_area = false;
+global.p3_in_area = false;
+global.p4_in_area = false;
+global.p5_in_area = false;
+global.p6_in_area = false;
+global.p7_in_area = false;
+global.p8_in_area = false;
 
 //====pause, intento de edu
 global.pause = false;
@@ -130,46 +139,46 @@ if(keyboard_check_pressed(vk_escape)
 //====manage controller detection and players
 //player 1 is allways true
 if(gamepad_is_connected(1)){
-    p2_on = true;
+    global.p2_on = true;
 }else{
-    p2_on = false;
+    global.p2_on = false;
 }
 if(gamepad_is_connected(2)){
-    p3_on = true;
+    global.p3_on = true;
 }else{
-    p3_on = false;
+    global.p3_on = false;
 }
 if(gamepad_is_connected(3)){
-    p4_on = true;
+    global.p4_on = true;
 }else{
-    p4_on = false;
+    global.p4_on = false;
 }
 if(gamepad_is_connected(4)){
-    p5_on = true;
+    global.p5_on = true;
 }else{
-    p5_on = false;
+    global.p5_on = false;
 }
 if(gamepad_is_connected(5)){
-    p6_on = true;
+    global.p6_on = true;
 }else{
-    p6_on = false;
+    global.p6_on = false;
 }
 if(gamepad_is_connected(6)){
-    p7_on = true;
+    global.p7_on = true;
 }else{
-    p7_on = false;
+    global.p7_on = false;
 }
 if(gamepad_is_connected(7)){
-    p8_on = true;
+    global.p8_on = true;
 }else{
-    p8_on = false;
+    global.p8_on = false;
 }
 
 //number of players
-num_players = p1_on + p2_on + p3_on + p4_on + p5_on + p6_on + p7_on + p8_on;
-dead_players = global.p1_dead + global.p2_dead + global.p3_dead + global.p4_dead + global.p5_dead + global.p6_dead + global.p7_dead + global.p8_dead;
+global.num_players = global.p1_on + global.p2_on + global.p3_on + global.p4_on + global.p5_on + global.p6_on + global.p7_on + global.p8_on;
+global.dead_players = global.p1_dead + global.p2_dead + global.p3_dead + global.p4_dead + global.p5_dead + global.p6_dead + global.p7_dead + global.p8_dead;
 
-if(global.player_lifes &lt;= 0 &amp;&amp; num_players == dead_players){
+if(global.player_lifes &lt;= 0 &amp;&amp; global.num_players == global.dead_players){
     game_restart();
 }
 </string>
@@ -200,9 +209,9 @@ if(global.player_lifes &lt;= 0 &amp;&amp; num_players == dead_players){
 //}
 if(instance_exists(obj_player_spawn)){
     instance_create(obj_player_spawn.x,obj_player_spawn.y,obj_mc)
-    if(p2_on) instance_create(obj_player_spawn.x + 20,obj_player_spawn.y,obj_mc_2);
-    if(p3_on) instance_create(obj_player_spawn.x + 40,obj_player_spawn.y,obj_mc_3);
-    if(p4_on) instance_create(obj_player_spawn.x + 60,obj_player_spawn.y,obj_mc_4);
+    if(global.p2_on) instance_create(obj_player_spawn.x + 20,obj_player_spawn.y,obj_mc_2);
+    if(global.p3_on) instance_create(obj_player_spawn.x + 40,obj_player_spawn.y,obj_mc_3);
+    if(global.p4_on) instance_create(obj_player_spawn.x + 60,obj_player_spawn.y,obj_mc_4);
     is_level = true;
 }else{
     is_level = false;
@@ -210,7 +219,7 @@ if(instance_exists(obj_player_spawn)){
 
 
 
-if(is_level &amp;&amp; num_players &gt; 1){
+if(is_level &amp;&amp; global.num_players &gt; 1){
     instance_create(obj_player_spawn.x,obj_player_spawn.y,obj_mc_view_control)
 }else{
     view_object[0] = obj_mc;
@@ -251,7 +260,7 @@ if(is_level){
     draw_set_font(fnt_adventure);
     draw_text(view_xview[0] + view_wport[0] - 20,view_yview[0] + 10, "Score: " + string(global.gameScore) + "#Lives: " + string(global.player_lifes) + "/" + string(global.inital_player_lifes)); 
     
-    if(p1_on &amp;&amp; !global.p1_dead){
+    if(global.p1_on &amp;&amp; !global.p1_dead){
         //Draw stamina &amp; health p1
         draw_set_color(c_black);
         draw_set_halign(fa_left);
@@ -263,7 +272,7 @@ if(is_level){
         draw_set_font(fnt_adventure);
         draw_text(view_xview[0] + 20,view_yview[0] + 10, "HP : " + string(obj_mc.hp) + "/" + string(obj_mc.maxhp) + "#SP : " + string(obj_mc.dash_bank) + "/" + string(obj_mc.initial_dash_bank));
     }
-    if(p2_on &amp;&amp; !global.p2_dead){
+    if(global.p2_on &amp;&amp; !global.p2_dead){
         //Draw stamina &amp; health p2
         draw_set_color(c_black);
         draw_set_halign(fa_left);
@@ -275,7 +284,7 @@ if(is_level){
         draw_set_font(fnt_adventure);
         draw_text(view_xview[0] + 350,view_yview[0] + 10, "HP : " + string(obj_mc_2.hp) + "/" + string(obj_mc_2.maxhp) + "#SP : " + string(obj_mc_2.dash_bank) + "/" + string(obj_mc_2.initial_dash_bank));
     }
-    if(p3_on &amp;&amp; !global.p3_dead){
+    if(global.p3_on &amp;&amp; !global.p3_dead){
         //Draw stamina &amp; health p3
         draw_set_color(c_black);
         draw_set_halign(fa_left);
@@ -287,7 +296,7 @@ if(is_level){
         draw_set_font(fnt_adventure);
         draw_text(view_xview[0] + 680,view_yview[0] + 10, "HP : " + string(obj_mc_3.hp) + "/" + string(obj_mc_3.maxhp) + "#SP : " + string(obj_mc_3.dash_bank) + "/" + string(obj_mc_3.initial_dash_bank));
     }
-    if(p4_on &amp;&amp; !global.p4_dead){
+    if(global.p4_on &amp;&amp; !global.p4_dead){
         //Draw stamina &amp; health p4
         draw_set_color(c_white);
         draw_set_halign(fa_left);

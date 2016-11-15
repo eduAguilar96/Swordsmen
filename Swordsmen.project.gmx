@@ -79,6 +79,7 @@
       <sprite>sprites\sprt_menu_arrow</sprite>
       <sprite>sprites\sprt_door</sprite>
       <sprite>sprites\sprt_hit</sprite>
+      <sprite>sprites\sprt_level_1_area_hitbox</sprite>
       <sprites name="tutorial">
         <sprite>sprites\sprt_tut_jump</sprite>
         <sprite>sprites\sprt_tut_attack</sprite>
@@ -231,6 +232,9 @@
     </objects>
     <objects name="other">
       <object>objects\obj_hit</object>
+      <object>objects\obj_level_1_area_round_1</object>
+      <object>objects\obj_area</object>
+      <object>objects\obj_wall_area_close</object>
     </objects>
   </objects>
   <rooms name="rooms">

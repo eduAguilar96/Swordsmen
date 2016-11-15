@@ -277,6 +277,13 @@ switch (state){
     case states.dash: scr_player_dash_3();
     break;
 }
+
+//check for area
+if(place_meeting(x,y,obj_area)){
+    global.p3_in_area = true;
+}else{
+    global.p3_in_area = false;
+}
 </string>
           </argument>
         </arguments>

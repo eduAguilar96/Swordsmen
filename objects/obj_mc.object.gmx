@@ -73,6 +73,7 @@ if(global.checkpointR == room){ //if no active checkpoint, set checkpoint in spa
     x = global.checkpointx;
     y = global.checkpointy;
 }
+
 </string>
           </argument>
         </arguments>
@@ -277,6 +278,12 @@ switch (state){
     break;
 }
 
+//check for area
+if(place_meeting(x,y,obj_area)){
+    global.p1_in_area = true;
+}else{
+    global.p1_in_area = false;
+}
 //function to enable fullscreen, used in development
 if mouse_check_button_pressed(mb_left)
    {
