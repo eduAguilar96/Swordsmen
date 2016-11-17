@@ -51,7 +51,7 @@ damage = 10;                //damage it deals on touch and/or atrtack state
 attack_damage = 75;
 can_take_damage = true;      //variable that controls taking damge cooldown
 
-detection_range = 250;
+detection_range = 20;
 
 </string>
           </argument>
@@ -128,9 +128,7 @@ if (place_meeting(x+hsp * 8,y,obj_wall)){   //Horizontal Collision
         x += sign(hsp); 
     } 
     hsp = 0; 
-    if(distance_to_object(obj_mc &gt; detection_range)){
-        move *= -1;                         //change direction if collision
-    }
+    
 }   
 x += hsp;                               //Add horizontal speed to current position
 
@@ -142,8 +140,7 @@ if (place_meeting(x,y+vsp,obj_wall)){   //Vertical Collision
     
                                         //Turn around on edges if fear of heights on
     if(fear_of_heights &amp;&amp; !position_meeting(x + (sprite_height/2) * move, y+(sprite_height/2) + 80, obj_wall)){
-        hsp = 0; 
-        move *= -1;
+        move = 0; 
     }
 } 
 y += vsp;
@@ -173,7 +170,7 @@ else{                      //if taking damage restict movement and color change
 if(instance_exists(obj_mc)){
     if(!attacking){
         sprite_index = sprt_mob_golem_walk;
-        if(distance_to_object(obj_mc &lt;= detection_range)){
+        if(distance_to_object(obj_mc)  &lt;= detection_range){
             if(obj_mc.x &gt; x){
                 move = 1;
             }else{

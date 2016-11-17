@@ -121,7 +121,7 @@ if(move != 0){
 
 //====Colissions &amp; behavior with it
  
-if (place_meeting(x+hsp,y,obj_wall)){   //Horizontal Collision
+if (place_meeting(x+hsp,y,obj_wall)) {   //Horizontal Collision
     while(!place_meeting(x+sign(hsp),y,obj_wall)){ 
         x += sign(hsp); 
     } 

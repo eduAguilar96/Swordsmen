@@ -31,6 +31,7 @@
       <sprite>sprites\sprt_wall_father</sprite>
       <sprite>sprites\sprt_grass_block</sprite>
       <sprite>sprites\sprt_grass_block_day</sprite>
+      <sprite>sprites\sprt_64</sprite>
       <sprite>sprites\sprt_wall_father_grass_plataform</sprite>
       <sprite>sprites\sprt_rock_block</sprite>
       <sprite>sprites\sprt_grass_plataform_single</sprite>
@@ -168,6 +169,7 @@
       <object>objects\obj_block_purple</object>
       <object>objects\obj_block_red</object>
       <object>objects\obj_lava_block</object>
+      <object>objects\obj_inv_wall</object>
     </objects>
     <objects name="mc">
       <object>objects\obj_mc</object>
