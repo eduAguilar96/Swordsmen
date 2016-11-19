@@ -205,6 +205,7 @@
       <objects name="doors">
         <object>objects\obj_door_0</object>
         <object>objects\obj_door_1</object>
+        <object>objects\obj_door_2</object>
         <object>objects\obj_door_return_0</object>
       </objects>
       <objects name="text">
@@ -245,6 +246,7 @@
     <room>rooms\level_select</room>
     <room>rooms\level_0</room>
     <room>rooms\level_1</room>
+    <room>rooms\level_2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
