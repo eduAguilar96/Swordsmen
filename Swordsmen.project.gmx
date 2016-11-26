@@ -6,7 +6,12 @@
   <NewExtensions>
     <extension index="0">extensions\Multiple-Object Camera</extension>
   </NewExtensions>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_music_evangelion</sound>
+    <sound>sound\snd_music_arpanauts</sound>
+    <sound>sound\snd_music_allofus</sound>
+    <sound>sound\snd_music_jumpshot</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="mc">
       <sprite>sprites\sprt_mc</sprite>

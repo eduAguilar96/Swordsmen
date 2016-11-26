@@ -68,6 +68,7 @@ global.p8_in_area = false;
 //====pause, intento de edu
 global.pause = false;
 
+
 </string>
           </argument>
         </arguments>
@@ -181,6 +182,13 @@ global.dead_players = global.p1_dead + global.p2_dead + global.p3_dead + global.
 if(global.player_lifes &lt;= 0 &amp;&amp; global.num_players == global.dead_players){
     game_restart();
 }
+
+//====Infinite lives for Demo
+if(keyboard_check(ord('L'))){
+    global.inital_player_lifes = 1000000000;
+    global.player_lifes = 1000000000;
+
+}
 </string>
           </argument>
         </arguments>
@@ -204,9 +212,7 @@ if(global.player_lifes &lt;= 0 &amp;&amp; global.num_players == global.dead_play
           <argument>
             <kind>1</kind>
             <string>///Spawn the player at the beginning of each room
-//if(room.is_level &amp;&amp; global.playerLives &gt; 0){
-//    instance_create(obj_player_spawn.x,obj_player_spawn.y,obj_mc)
-//}
+
 if(instance_exists(obj_player_spawn)){
     instance_create(obj_player_spawn.x,obj_player_spawn.y,obj_mc)
     if(global.p2_on) instance_create(obj_player_spawn.x + 20,obj_player_spawn.y,obj_mc_2);
@@ -216,13 +222,33 @@ if(instance_exists(obj_player_spawn)){
 }else{
     is_level = false;
 }
-
-
-
+//====Control view
 if(is_level &amp;&amp; global.num_players &gt; 1){
     instance_create(obj_player_spawn.x,obj_player_spawn.y,obj_mc_view_control)
 }else{
     view_object[0] = obj_mc;
+}
+
+//====Music determination
+if(room == level_menu){
+    audio_stop_all();
+    audio_play_sound(snd_music_evangelion, 10, true);
+}
+if(room == level_select){
+    audio_stop_all();
+    audio_play_sound(snd_music_arpanauts, 10, true);
+}
+if(room == level_0){
+    audio_stop_all();
+    audio_play_sound(snd_music_jumpshot, 10, true);
+}
+if(room == level_1){
+    audio_stop_all();
+    audio_play_sound(snd_music_allofus, 10, true);
+}
+if(room == level_2){
+    audio_stop_all();
+    audio_play_sound(snd_music_arpanauts, 10, true);
 }
 </string>
           </argument>

@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>-4</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>obj_mob_father</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -51,7 +51,7 @@ damage = 10;                //damage it deals on touch and/or atrtack state
 attack_damage = 75;
 can_take_damage = true;      //variable that controls taking damge cooldown
 
-detection_range = 20;
+detection_range = 150;
 
 </string>
           </argument>
