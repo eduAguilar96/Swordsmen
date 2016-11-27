@@ -137,43 +137,7 @@ if(keyboard_check_pressed(vk_escape)
         }
 }
 
-//====manage controller detection and players
-//player 1 is allways true
-if(gamepad_is_connected(1)){
-    global.p2_on = true;
-}else{
-    global.p2_on = false;
-}
-if(gamepad_is_connected(2)){
-    global.p3_on = true;
-}else{
-    global.p3_on = false;
-}
-if(gamepad_is_connected(3)){
-    global.p4_on = true;
-}else{
-    global.p4_on = false;
-}
-if(gamepad_is_connected(4)){
-    global.p5_on = true;
-}else{
-    global.p5_on = false;
-}
-if(gamepad_is_connected(5)){
-    global.p6_on = true;
-}else{
-    global.p6_on = false;
-}
-if(gamepad_is_connected(6)){
-    global.p7_on = true;
-}else{
-    global.p7_on = false;
-}
-if(gamepad_is_connected(7)){
-    global.p8_on = true;
-}else{
-    global.p8_on = false;
-}
+
 
 //number of players
 global.num_players = global.p1_on + global.p2_on + global.p3_on + global.p4_on + global.p5_on + global.p6_on + global.p7_on + global.p8_on;
@@ -211,8 +175,45 @@ if(keyboard_check(ord('L'))){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Spawn the player at the beginning of each room
+            <string>//====manage controller detection and players
+//player 1 is allways true
+if(gamepad_is_connected(1)){
+    global.p2_on = true;
+}else{
+    global.p2_on = false;
+}
+if(gamepad_is_connected(2)){
+    global.p3_on = true;
+}else{
+    global.p3_on = false;
+}
+if(gamepad_is_connected(3)){
+    global.p4_on = true;
+}else{
+    global.p4_on = false;
+}
+if(gamepad_is_connected(4)){
+    global.p5_on = true;
+}else{
+    global.p5_on = false;
+}
+if(gamepad_is_connected(5)){
+    global.p6_on = true;
+}else{
+    global.p6_on = false;
+}
+if(gamepad_is_connected(6)){
+    global.p7_on = true;
+}else{
+    global.p7_on = false;
+}
+if(gamepad_is_connected(7)){
+    global.p8_on = true;
+}else{
+    global.p8_on = false;
+}
 
+//Spawn the player at the beginning of each room
 if(instance_exists(obj_player_spawn)){
     instance_create(obj_player_spawn.x,obj_player_spawn.y,obj_mc)
     if(global.p2_on) instance_create(obj_player_spawn.x + 20,obj_player_spawn.y,obj_mc_2);

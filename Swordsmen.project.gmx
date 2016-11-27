@@ -14,6 +14,7 @@
       <sound>sound\snd_music_jumpshot</sound>
     </sounds>
     <sound>sound\snd_effect_walkgrass</sound>
+    <sound>sound\snd_effect</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="mc">
