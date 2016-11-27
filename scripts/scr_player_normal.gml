@@ -66,6 +66,14 @@ if (place_meeting(x,y+1,obj_wall))                  //if on floor
     if(key_down_hold){
         state = states.crouch;
     }
+    
+    //====Walking sound
+    if(move != 0){
+        audio_resume_sound(snd_effect_walkgrass);
+        //show_message("caminando sonido");
+    }else{
+        audio_pause_sound(snd_effect_walkgrass);
+    }
 }
 if (vsp < 0) && (!key_jump_hold){                   //dynamic jumpin
     vsp -= max(vsp,-jumpspeed/8);
@@ -95,6 +103,8 @@ if( place_meeting(x,y,obj_mob_father)
         
         state = states.damage;
 }
+
+
 
 
 scr_collideandmove();

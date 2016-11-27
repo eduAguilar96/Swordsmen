@@ -74,6 +74,11 @@ if(global.checkpointR == room){ //if no active checkpoint, set checkpoint in spa
     y = global.checkpointy;
 }
 
+//====Play sounds
+audio_play_sound(snd_effect_walkgrass, 9, true);
+//audio_pause_sound(snd_effect_walkgrass);
+
+
 </string>
           </argument>
         </arguments>
