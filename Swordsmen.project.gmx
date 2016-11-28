@@ -231,6 +231,7 @@
         <object>objects\obj_door_1</object>
         <object>objects\obj_door_2</object>
         <object>objects\obj_door_3</object>
+        <object>objects\obj_door_return</object>
         <object>objects\obj_door_return_0</object>
         <object>objects\obj_door_return_1</object>
         <object>objects\obj_door_return_3</object>

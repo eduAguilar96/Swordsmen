@@ -663,7 +663,7 @@ window_set_fullscreen(true);</code>
     <instance objName="obj_grass_block_day" x="3968" y="3136" name="inst_F1BA8B5F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grass_block_day" x="4032" y="3136" name="inst_39711C2F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_lampost" x="640" y="3968" name="inst_49EBF0CB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_lampost" x="2624" y="2816" name="inst_211767BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_lampost" x="2368" y="2816" name="inst_211767BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_block_grey" x="2496" y="4544" name="inst_717DF6EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_block_grey" x="2496" y="4608" name="inst_9C5401D6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_block_grey" x="2496" y="4672" name="inst_F3352229" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1327,7 +1327,7 @@ window_set_fullscreen(true);</code>
     <instance objName="obj_mob_slime" x="4800" y="4032" name="inst_C3CBD585" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mob_slime" x="5504" y="4032" name="inst_35AEDDD2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mob_slime" x="5120" y="4032" name="inst_E4CE231C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_mob_knight" x="3840" y="3392" name="inst_7E698DA0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mob_knight" x="3968" y="3392" name="inst_7E698DA0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tut_block" x="5824" y="3072" name="inst_A5AD0718" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tut_block" x="5888" y="3072" name="inst_FDAE81E7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tut_block" x="5952" y="3072" name="inst_D1E690F0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1737,12 +1737,6 @@ window_set_fullscreen(true);</code>
     <instance objName="obj_block_grey" x="3456" y="3904" name="inst_8BABAC87" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_block_grey" x="3456" y="3840" name="inst_BF038404" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_block_grey" x="3456" y="3776" name="inst_73A9BA67" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_door_0" x="1856" y="3776" name="inst_27D56F71" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_door_0" x="1088" y="4032" name="inst_4957E14A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_door_0" x="3296" y="3840" name="inst_72FCFDB7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_door_0" x="4608" y="4224" name="inst_C4FD7341" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_door_0" x="9088" y="4096" name="inst_89F2FABD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_door_0" x="6528" y="2816" name="inst_29C4696D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_block_red" x="9152" y="4288" name="inst_81990627" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_block_red" x="9216" y="4288" name="inst_CB654545" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grass_block_day" x="1600" y="4032" name="inst_EC062714" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -1755,12 +1749,15 @@ window_set_fullscreen(true);</code>
     <instance objName="obj_block_grey" x="2048" y="4032" name="inst_3E992BD8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_block_grey" x="2112" y="4032" name="inst_D7A652EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player_spawn" x="2240" y="2816" name="inst_5D601E73" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_door_1" x="3200" y="2880" name="inst_14EBA11A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_en_tall_tree" x="2368" y="2752" name="inst_0FB99572" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door_1" x="3584" y="3328" name="inst_14EBA11A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_en_tall_tree" x="2560" y="2752" name="inst_0FB99572" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_door_0" x="2880" y="2880" name="inst_985CEF2D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mob_knight" x="1321" y="3057" name="inst_F818F3B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_door_2" x="3520" y="2880" name="inst_DD093DD9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_door_3" x="3840" y="2880" name="inst_52402DCC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door_2" x="4544" y="4224" name="inst_DD093DD9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door_3" x="3296" y="3840" name="inst_52402DCC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door_return" x="6464" y="2816" name="inst_3AA94912" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door_return" x="9088" y="4096" name="inst_2E61D7D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door_return" x="1856" y="3776" name="inst_430335DB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
