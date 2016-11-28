@@ -29,7 +29,7 @@
 
 with(instance_place(x,y,obj_mc)){
     if(key_action){
-        global.gameScore += time * 100 * (global.player_lifes + 1)
+        global.gameScore += obj_infinite_dash.time * 100 * (global.player_lifes + 1)
         room_goto(level_select);
     }
 }
