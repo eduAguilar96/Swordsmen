@@ -81,6 +81,9 @@ can_take_damage = true;
 
 if(hp &lt;= 0){
     global.totalCombo++;
+    if(global.totalCombo == 2){
+        audio_play_sound(snd_effect_combo,10,false);
+    }
     global.gameScore += kill_score * global.totalCombo;
     obj_game_manager.alarm[0] = global.comboTime;
        

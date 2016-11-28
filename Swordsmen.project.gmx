@@ -30,6 +30,7 @@
       <sound>sound\snd_effect_hit_slime</sound>
       <sound>sound\snd_effect_bird</sound>
     </sounds>
+    <sound>sound\snd_effect_combo</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="mc">

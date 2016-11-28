@@ -84,6 +84,7 @@ with(instance_place(x + 5,y,obj_lava_block)){   //check enenmy id
         else{
             other.hp -= damage;
         }
+        
     }else{
         state = states.normal;
     }
@@ -106,6 +107,7 @@ with(instance_place(x - 5,y,obj_lava_block)){   //check enenmy id
         else{
             other.hp -= damage;
         }
+        
     }else{
         state = states.normal;
     }
@@ -120,5 +122,8 @@ if(image_index == 2){
 if (vsp < 10){                  //Start adding gravity to vertical speed
     vsp += grav;
 }
+
+//====Sound
+
 
 scr_collideandmove();           //collide and move
