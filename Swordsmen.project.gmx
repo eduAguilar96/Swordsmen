@@ -13,8 +13,23 @@
       <sound>sound\snd_music_arpanauts</sound>
       <sound>sound\snd_music_jumpshot</sound>
     </sounds>
-    <sound>sound\snd_effect_walkgrass</sound>
-    <sound>sound\snd_effect</sound>
+    <sounds name="effects">
+      <sound>sound\snd_effect_hit</sound>
+      <sound>sound\snd_effect_hit_2</sound>
+      <sound>sound\snd_effect_slash_1</sound>
+      <sound>sound\snd_effect_slash_2</sound>
+      <sound>sound\snd_effect_slash_3</sound>
+      <sound>sound\snd_effect_jump</sound>
+      <sound>sound\snd_effect_mc_damage</sound>
+      <sound>sound\snd_effect_mc_death</sound>
+      <sound>sound\snd_effect_dash</sound>
+      <sound>sound\snd_effect_menu</sound>
+      <sound>sound\snd_effect_knight_swing</sound>
+      <sound>sound\snd_effect_knight_swing_back</sound>
+      <sound>sound\snd_effect_golem_hit</sound>
+      <sound>sound\snd_effect_hit_slime</sound>
+      <sound>sound\snd_effect_bird</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprites name="mc">
