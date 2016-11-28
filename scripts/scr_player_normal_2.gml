@@ -60,6 +60,8 @@ if (place_meeting(x,y+1,obj_wall))                  //if on floor
         can_attack = true;
         can_combo = false;
         last_attack = 0;
+        
+        audio_play_sound(snd_effect_jump, 10, false);
     }
     
     //====Change to possible crouch state
@@ -81,6 +83,7 @@ if(key_attack && !place_meeting(x,y+1,obj_wall) && key_down_hold){
 //====Change to possible Dash state
 if(key_dash && dash_bank >= 1){
     state = states.dash;
+    audio_play_sound(snd_effect_dash, 10, false);
 }
 if(dash_bank < initial_dash_bank){                  //regen dash
     dash_bank += 0.01;
@@ -94,6 +97,8 @@ if( place_meeting(x,y,obj_mob_father)
     || place_meeting(x-1,y,obj_lava_block)){
         
         state = states.damage;
+        
+        audio_play_sound(snd_effect_mc_damage, 10, false);
 }
 
 

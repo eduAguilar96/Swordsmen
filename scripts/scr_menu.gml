@@ -7,15 +7,7 @@ switch (mpos)
         room_goto_next();
         break;    
     }
-    case 1:
-    {
-        break;
-    }
-    case 2:
-    {
-        break;
-    }
-    case 3: 
+    case 1: 
     {
         game_end();
         break;

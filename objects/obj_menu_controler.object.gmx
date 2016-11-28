@@ -26,9 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>menu[0] = "Start";
-menu[1] = "Continue";
-menu[2] = "Options";
-menu[3] = "Exit";
+menu[1] = "Exit";
 
 
 space = 64;
@@ -69,6 +67,8 @@ if (move != 0)
     mpos += move;
     if (mpos &lt; 0) mpos = array_length_1d(menu) - 1;
     if (mpos &gt; array_length_1d(menu) -1) mpos = 0;
+    
+    audio_play_sound(snd_effect_menu,10,false);
 }
 
 var push;
@@ -105,16 +105,20 @@ if (push == 1) scr_menu();
             <string>draw_set_halign(fa_left);
 //draw_set_valign(fa_middle);
 draw_set_font(fnt_adventure);
-draw_set_color(c_white);
+
 
 var m;
 for (m = 0; m &lt; array_length_1d(menu); m += 1)
 {
+    draw_set_color(c_black);
+    draw_text(x + space + 3, y + (m * space) + 3,string(menu[m]))
+    
+    draw_set_color(c_white);
     draw_text(x + space, y + (m * space),string(menu[m]))
 
 }
 
-draw_sprite(sprite_index, 0, x + 16, y + mpos * space);
+draw_sprite(sprite_index, 0, x + 16, y + mpos * space + 22);
 
 </string>
           </argument>

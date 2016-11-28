@@ -35,6 +35,8 @@ attack_dir = 1;
 
 damage = 45;
 doing_damage = false;
+
+audio_play_sound(snd_effect_slash_3, 10, false);
 </string>
           </argument>
         </arguments>

@@ -74,9 +74,6 @@ if(global.checkpointR == room){ //if no active checkpoint, set checkpoint in spa
     y = global.checkpointy;
 }
 
-//====Play sounds
-audio_play_sound(snd_effect_walkgrass, 9, true);
-//audio_pause_sound(snd_effect_walkgrass);
 
 
 </string>
@@ -184,6 +181,9 @@ if(hp &lt;= 0 &amp;&amp; global.player_lifes &gt; 0){     //if dead and can revi
 }else if(hp &lt;= 0 &amp;&amp; global.player_lifes &lt;= 0){
     //game_restart();
     global.p1_dead = true;
+    
+    audio_play_sound(snd_effect_mc_death, 10, false);
+    
     instance_destroy();
 }
 </string>

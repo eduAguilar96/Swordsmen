@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>///Set speed
 //image_speed = room_speed * 0.5;
+audio_play_sound(snd_effect_hit, 10, false);
 </string>
           </argument>
         </arguments>
