@@ -301,6 +301,10 @@ if(room == level_2){
     audio_stop_all();
     audio_play_sound(snd_music_arpanauts, 10, true);
 }
+if(room == level_3){
+    audio_stop_all();
+    audio_play_sound(snd_music_jumpshot, 10, true);
+}
 </string>
           </argument>
         </arguments>

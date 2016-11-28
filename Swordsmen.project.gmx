@@ -224,13 +224,13 @@
     </objects>
     <objects name="managersControles">
       <object>objects\obj_game_manager</object>
-      <object>objects\bck_cntrl_night</object>
-      <object>objects\bck_cntrl_day</object>
-      <object>objects\bck_cntrl_cave</object>
+      <object>objects\obj_player_spawn</object>
+      <object>objects\obj_lampost</object>
       <objects name="doors">
         <object>objects\obj_door_0</object>
         <object>objects\obj_door_1</object>
         <object>objects\obj_door_2</object>
+        <object>objects\obj_door_3</object>
         <object>objects\obj_door_return_0</object>
         <object>objects\obj_door_return_1</object>
       </objects>
@@ -253,8 +253,12 @@
         <object>objects\obj_menu_mc_3</object>
         <object>objects\obj_menu_mc_4</object>
       </objects>
-      <object>objects\obj_player_spawn</object>
-      <object>objects\obj_lampost</object>
+      <objects name="other">
+        <object>objects\bck_cntrl_cave</object>
+        <object>objects\bck_cntrl_night</object>
+        <object>objects\bck_cntrl_day</object>
+        <object>objects\obj_infinite_dash</object>
+      </objects>
     </objects>
     <objects name="npc">
       <object>objects\obj_npc_marcianito</object>
@@ -273,6 +277,7 @@
     <room>rooms\level_0</room>
     <room>rooms\level_1</room>
     <room>rooms\level_2</room>
+    <room>rooms\level_3</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

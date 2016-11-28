@@ -1584,8 +1584,8 @@ window_set_fullscreen(true);</code>
     <instance objName="obj_grass_block" x="5632" y="512" name="inst_C0CA2C47" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grass_block" x="8896" y="512" name="inst_AD5FDC61" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grass_block" x="8960" y="512" name="inst_462AC478" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player_spawn" x="12800" y="832" name="inst_89CA5495" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door_return_1" x="14016" y="832" name="inst_08613B07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player_spawn" x="256" y="832" name="inst_C0720EC9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

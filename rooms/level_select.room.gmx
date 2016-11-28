@@ -1756,12 +1756,11 @@ window_set_fullscreen(true);</code>
     <instance objName="obj_block_grey" x="2112" y="4032" name="inst_D7A652EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player_spawn" x="2240" y="2816" name="inst_5D601E73" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door_1" x="3200" y="2880" name="inst_14EBA11A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_door_1" x="3840" y="2880" name="inst_32F2BCBF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_door_1" x="4160" y="2880" name="inst_C60CFA82" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_en_tall_tree" x="2368" y="2752" name="inst_0FB99572" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="obj_door_0" x="2880" y="2880" name="inst_985CEF2D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_mob_knight" x="1321" y="3057" name="inst_F818F3B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_door_2" x="3520" y="2880" name="inst_DD093DD9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door_3" x="3840" y="2880" name="inst_52402DCC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
