@@ -113,7 +113,7 @@ if(place_meeting(x,y,obj_mob_father)){
     mobs = false;
 }
 //====Start round 1
-if(closed &amp;&amp; !round_1 &amp;&amp; !round_2 &amp;&amp; !round_3 &amp;&amp; !round_4 &amp;&amp; !round_5 &amp;&amp; cooldown){
+if(closed &amp;&amp; !round_1 &amp;&amp; !round_2 &amp;&amp; !round_3 &amp;&amp; !round_4 &amp;&amp; !round_5 &amp;&amp; cooldown &amp;&amp; !door){
     cooldown = false;
     round_1 = true;
 }
