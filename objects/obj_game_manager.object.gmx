@@ -68,7 +68,8 @@ global.p8_in_area = false;
 //====pause, intento de edu
 global.pause = false;
 
-
+//====invincible
+invincible = false;
 </string>
           </argument>
         </arguments>
@@ -148,11 +149,60 @@ if(global.player_lifes &lt;= 0 &amp;&amp; global.num_players == global.dead_play
 }
 
 //====Infinite lives for Demo
-if(keyboard_check(ord('L'))){
-    global.inital_player_lifes = 1000000000;
-    global.player_lifes = 1000000000;
-
+if(keyboard_check_pressed(ord('L'))){
+    if(global.inital_player_lifes = 5){
+        global.inital_player_lifes = 1000;
+        global.player_lifes = 1000;
+    }else{
+        global.inital_player_lifes = 5;
+        global.player_lifes = 5;
+    }
 }
+
+if(keyboard_check_pressed(ord('I'))){
+    if(invincible){
+        invincible = false;
+    }else{
+        invincible = true;
+    }
+}
+if(invincible){
+    if(instance_exists(obj_mc)){
+        obj_mc.hp = 100;
+    }
+    if(instance_exists(obj_mc_2)){
+        obj_mc_2.hp = 100;
+    }
+    if(instance_exists(obj_mc_3)){
+        obj_mc_3.hp = 100;
+    }
+    if(instance_exists(obj_mc_4)){
+        obj_mc_4.hp = 100;
+    }
+}
+
+if(keyboard_check_pressed(ord('N'))){
+    if(instance_exists(obj_mc)){
+        obj_mc.state = states.normal;
+    }
+    if(instance_exists(obj_mc_2)){
+        obj_mc_2.state = states.normal;
+    }
+    if(instance_exists(obj_mc_3)){
+        obj_mc_3.state = states.normal;
+    }
+    if(instance_exists(obj_mc_4)){
+        obj_mc_4.state = states.normal;
+    }
+}
+
+if(keyboard_check_pressed(ord('Q'))){
+    room_goto(level_menu);
+}
+if(keyboard_check_pressed(ord('P'))){
+    room_goto(level_select);
+}
+
 </string>
           </argument>
         </arguments>
@@ -277,12 +327,20 @@ if(room == level_2){
 
 if(is_level){
     //Draw SCORE and lives
-    draw_set_color(c_black);
+    if(invincible){
+        draw_set_color(c_white);
+    }else{
+        draw_set_color(c_black);
+    }
     draw_set_halign(fa_right);
     draw_set_font(fnt_adventure);
     draw_text(view_xview[0] + view_wport[0] - 20 + 2,view_yview[0] + 10 + 2, "Score: " + string(global.gameScore) + "#Lives: " + string(global.player_lifes) + "/" + string(global.inital_player_lifes));
 
-    draw_set_color(c_white);
+    if(invincible){
+        draw_set_color(c_blue);
+    }else{
+        draw_set_color(c_white);
+    }
     draw_set_halign(fa_right);
     draw_set_font(fnt_adventure);
     draw_text(view_xview[0] + view_wport[0] - 20,view_yview[0] + 10, "Score: " + string(global.gameScore) + "#Lives: " + string(global.player_lifes) + "/" + string(global.inital_player_lifes)); 
@@ -353,7 +411,7 @@ if(is_level){
     if(global.pause){
         draw_set_color(c_black);
         draw_set_alpha(0.5);
-        draw_rectangle(0,0,room_width, room_height,0);
+        draw_rectangle(0,0,room_width * 10, room_height * 10,0);
         draw_set_halign(fa_center);
         draw_set_font(fnt_karmaFuture);
         draw_set_color(c_white);

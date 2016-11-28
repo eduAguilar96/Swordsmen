@@ -40,6 +40,34 @@ closed = false;
 started = false;
 
 mobs = false;
+
+cooldown = false;
+
+door = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Control cooldown
+cooldown = true;
 </string>
           </argument>
         </arguments>
@@ -74,37 +102,42 @@ players_in_area = global.p1_in_area
 //====Close wall                
 if(players_in_area == global.num_players - global.dead_players){    //if all alive players are inside
     closed = true;
+}else{
+    alarm[0] = room_speed * 5;
 }
 //====check for mobs
 if(place_meeting(x,y,obj_mob_father)){
     mobs = true;
+    alarm[0] = room_speed * 5;
 }else{
     mobs = false;
 }
 //====Start round 1
-if(closed &amp;&amp; !round_1 &amp;&amp; !round_2 &amp;&amp; !round_3 &amp;&amp; !round_4 &amp;&amp; !round_5){
+if(closed &amp;&amp; !round_1 &amp;&amp; !round_2 &amp;&amp; !round_3 &amp;&amp; !round_4 &amp;&amp; !round_5 &amp;&amp; cooldown){
+    cooldown = false;
     round_1 = true;
 }
 if(round_1 &amp;&amp; !started){    //spawn round 1
     started = true;
-    instance_create(x-100, y -100, obj_mob_slime_big);
-    instance_create(x+100, y -100, obj_mob_slime_big);
+    instance_create(x-400, y -100, obj_mob_slime_big);
+    instance_create(x+400, y -100, obj_mob_slime_big);
     instance_create(x,y,obj_mob_slime_big);
     
-    instance_create(x-100, y -100, obj_mob_flypod_slime);
-    instance_create(x+100, y -100, obj_mob_flypod_slime);
+    instance_create(x-400, y -100, obj_mob_flypod_slime);
+    instance_create(x+400, y -100, obj_mob_flypod_slime);
 }
 
 //====Start round 2
-if(round_1 &amp;&amp; !mobs){
+if(round_1 &amp;&amp; !mobs &amp;&amp; cooldown){
+    cooldown = false;
     round_1 = false;
     round_2 = true;
     started = false;
 }
 if(round_2 &amp;&amp; !started){    //spawn round 2
     started = true;
-    instance_create(x-100, y -100, obj_mob_knight);
-    instance_create(x+100, y -100, obj_mob_knight);
+    instance_create(x-400, y -100, obj_mob_knight);
+    instance_create(x+400, y -100, obj_mob_knight);
     instance_create(x,y,obj_mob_slime_big);
     
     instance_create(x-100, y -100, obj_mob_flypod_slime);
@@ -112,10 +145,27 @@ if(round_2 &amp;&amp; !started){    //spawn round 2
 }
 
 //====Start round 3
-if(round_2 &amp;&amp; !mobs){
+if(round_2 &amp;&amp; !mobs &amp;&amp; cooldown){
+    cooldown = false;
     round_2 = false;
     round_3 = true;
     started = false;
+}
+if(round_3 &amp;&amp; !started){    //spawn round 3
+    started = true;
+    instance_create(x-400, y -100, obj_mob_golem);
+    instance_create(x+400, y -100, obj_mob_golem);
+    instance_create(x,y,obj_mob_knight);
+    
+    instance_create(x-100, y -100, obj_mob_flypod_slime);
+    instance_create(x+100, y -100, obj_mob_flypod_slime);
+}
+
+//====spawn door
+
+if(round_3 &amp;&amp; !mobs &amp;&amp; cooldown){
+    door = true;
+    round_3 = false;
 }
 </string>
           </argument>
