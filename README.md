@@ -2,6 +2,8 @@
 
 Videogame created as final assignment project for the class "Introduccion a la Carrera" at the *Instituto de Tecnologia y Estudios Superiores de Monterrey* as part of the Bachleror in Computer Science and Technology Program.
 
+**UPDATE 12/5/2016** This project has already been turned in, it won best project of the generation voted by the jury(Profesors) and also by the generation itself. Thankyou team.
+
 Limited from using full-on game engines(Ex. Unity and UE4) this game was developed with:
 - [GameMaker](http://www.yoyogames.com/gamemaker)
 - [Adobe](http://www.adobe.com/) Photoshop CS 6 *Trial Version*
